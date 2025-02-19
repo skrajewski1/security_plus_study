@@ -1,0 +1,13 @@
+Title: Comptia Security+ Exam Notes
+Date: 2-19-2025
+Author: Sean Krajewski
+
+##### Note to Reader #####
+
+Below are my notes I took while studying to take the Comptia Security+ Exam.
+This isn't meant to be 100% thorough and is not a study guide.  It's just a personal resource I created with the aim of reducing
+time looking for things. Typically I would write out my notes by hand but I found typing is faster and the Ctrl + F search function 
+works for me.  I'm sharing this here because Github because I have some other work here and want to keep things simple.
+Use these notes as you please.  Hope they help and thank you for reading!
+
+
