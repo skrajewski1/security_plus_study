@@ -6,9 +6,31 @@ Author: Sean Krajewski
 ## Table of Contents 
 1. [Note to Reader](#overview)
 2. [Resources](#stuff I used to study)
-3. 
-
-
+3. Security Controls
+4. Encryption
+5. Hashing
+6. Digital Signatures
+7. Digital Certificates
+8. Threat Actor Types
+9. Threat Vectors & Attack Surfaces
+10. Social Engineering
+11. Security Vulnerabilities
+12. Malware Attacks
+13. Network Attacks
+14. Application Attacks
+15. Indicators of Malicious Activity
+16. Data Protection Concepts
+17. Resilience & Recovery
+18. Wireless Security Settings
+19. Application Security
+20. Vulnerability Management
+21. Secure Network Protocols
+22. Access Controls
+23. Password Concepts
+24. Incident Response Activities
+25. Risk Management Concepts
+26. Agreement Types
+27. Penetration Testing
 
 
 1. Note to Reader 
@@ -28,4 +50,8 @@ https://www.examcompass.com/   (has tests, quizes to use)
 Professer Messer      (lot of free content on YouTube)
 https://www.comptia.org/certifications/security#examdetails   (Exam details)
 
+
+
+
+3. Security Controls
 
