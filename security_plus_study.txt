@@ -6,10 +6,7 @@ Author: Sean Krajewski
 ## Table of Contents 
 1. [Note to Reader](#overview)
 2. [Resources](#stuff I used to study)
-3. [Commands](#commands)
-4. [Troubleshooting](#troubleshooting)
-5. [Resources](#resources)
-6. [To-Do](#to-do)
+3. 
 
 
 
