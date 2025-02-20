@@ -240,8 +240,76 @@ Shadow IT is IT personnel using unapproved cloud services, apps, devices for wor
 
 9. Threat Vectors & Attack Surfaces
 
+attack surface =  refers to all the potential points through which an attacker can interact with a system or network. 
+
+email-based threat vector:
+spoofing
+phishing
+BEC Attacks
+Malicious links
+Malware attachments
+
+Smishing = is text messages to deliver fraudulent messages aimed at stealing sensitive information  (combo of SMS and phishing)
+
+Instant Messaging threat vectos:
+phishing attack 
+malware distribution 
+spoofing attack
+eavesdropping
+account hijacking
+malicious link/attachments
 
 
+image-based threat Vectors
+steganography (hiding code within an image file)
+image spoofing (deepfakes)
+malware-embedded images
+
+
+file-based threat vector
+PDF exploits
+Malicious macros in documents
+Compressed files (ZIP, RAR)
+Malicious scripts in web pages
+Infected images
+Malicious executables
+
+
+vishing = voice phishing i.e. person calls you to get sensitive info.  
+
+removable devices have 2 threat vectors malware delivery and data exfiltration
+
+client based threat-vectors
+ Drive-by download via web browser
+ Malicious macro
+ usb-based attack
+ Infected executable file
+ Malicious attachment in email application
+
+
+agentless software threat vectors
+ network protocol vulnerability
+ Packet sniffing
+
+
+Bluetooth threat vectors
+bluesmacking i.e. DoS 
+Bluejacking: sending unwanted messages usually as a prank
+Bluesnarfing: unauthorized access to a bluetooth device to steal data such as contacts,messages
+Bluebugging: gaining remote control over bluetooth device to eavesdropping
+
+
+open service ports are usually the most probable cause of unauthorized access to be exploited on a network entry points
+many devices come from the factory with default credentials i.e. username/password that should be changed because they can be looked up online relatively easily.
+
+Common threat vectors for managed service providers (MSPs), vendors, and suppliers are propagation of malware and social engineering techniques (i.e. targeting employees with sensitive data)
+
+unsupported systems/apps that don't receive regular updates/patches are often volnerable to exploits
+
+wireless technologies considered to have potential threat vectors
+WPS (wi-fi protected setup)
+WEP (wired equivalent privacy)
+WPA2WPA2
 
 
 
