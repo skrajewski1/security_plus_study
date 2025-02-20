@@ -192,10 +192,55 @@ Object Identifier (OID) = used to uniquely identify PKI objects
 
 8. Threat Actor Types
 
+External: nation-state, organized crime, hacktivist
+Internal: insider threat, shadow IT
+both: internal/external
+
+
+nation state:
+funding: high 
+sophistication:high
+motivations: Espionage, political/philosophical beliefs, disruption/chaos, war
+
+
+organized crime
+funding: med-high
+sophistication:med-high
+motivations: Financial gain, data exfiltration, extortion
+
+
+unskilled attacker
+funding: low 
+sophistication: low
+motivations: Disruption/chaos, financial gain, revenge
+
+
+hacktivist
+funding: low-med 
+sophistication: low-med
+motivations: Ethical beliefs, philosophical/political beliefs, disruption/chaos
+
+
+insider threat
+funding: low-high
+sophistication: low-high
+motivations: Revenge, financial gain, service disruption
+
+
+shadow IT
+funding: low-med
+sophistication: low-med
+motivations: Convenience, lack of awareness of security risks, meeting specific needs
+
+
+Advanced Persistent Threat (APT) sophisticated prolonged cyberattacks carried out by usually nation-states.  usually used to maintain long-term access to sensitive systems or data
+Shadow IT is IT personnel using unapproved cloud services, apps, devices for work purposes potentially creating security risks and compliance issues.
 
 
 
 9. Threat Vectors & Attack Surfaces
+
+
 
 
 
