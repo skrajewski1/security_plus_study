@@ -166,20 +166,27 @@ Cyclic Redundancy Check (CRC) =  non-cryptographic hash function often used for 
 
 6. Digital Signatures
 
-
-
-
-
-
-
-
-
-
+Digital signature = verifies authenticity and integrity of digital documents & messages using unique identifier from the sender
+ECDSA, RSA, DSA can be used for verifying digital signatures.   (DSA is a gov standard)
+Digital Signature Algorithm (DSA) was specifically designed for digital signatures, not used for encryption
+RSA is primarily used for secure communication (e.g. SSH) digital signatures, and data encryption
+ECDSA is used for digital signatures and does not include a native encrytpion function, it's great for smartcards, mobile devices, IoT!  Fall under ECC category.
 
 
 
 7. Digital Certificates
 
+Digital certificates = digital document that verifies an individual, device, service, organization in online commications
+Registration Authority (RA) role in Public Key Infrastructure (PKI) is accpeting requests for digital certs & authenticating the entity making the request
+Certificate Authority (CA)  acts as a third-party of digital certs
+Certificate Revocation list (CRL) list of revoked certs issed by CA of the PKI make sure revoked certs aren't trusted
+Online Certificate Status Protocol (OCSP) = protocol that checks if the revocation status of a cert, better/faster than relying on a published CRL.  This is the fastest!!
+Self signed dig. certs. are not trusted by default by web browsers/applications, typically used in trusted environments i.e. internal networks, not backed by trusted/well-known third party
+Self  signed certs are free and have no identity validaton.  third party certs cost and require identity validation
+Certificate Signing Request (CSR) = file that contains information to send to the cert authority (CA).  CSR contains info about entity, public key, identifying details which CA uses to issue the digital cert
+Wildcard certificate is used to secure multiple subdomains under a primary domain.
+Subject Alternative Name (SAN) cert = lets you secure multiple domain names or subdomains with a single cert
+Object Identifier (OID) = used to uniquely identify PKI objects
 
 
 
