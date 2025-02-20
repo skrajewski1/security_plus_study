@@ -164,17 +164,15 @@ Cyclic Redundancy Check (CRC) =  non-cryptographic hash function often used for 
 
 
 
-
-
-
-
-
-
-
-
-
-
 6. Digital Signatures
+
+
+
+
+
+
+
+
 
 
 
