@@ -18,7 +18,7 @@ Author: Sean Krajewski
 12. Malware Attacks
 13. Network Attacks
 14. Application Attacks
-15. Indicators of Malicious Activity
+15. Indicators iure of Malicious Activity
 16. Data Protection Concepts
 17. Resilience & Recovery
 18. Wireless Security Settings
@@ -99,6 +99,7 @@ directive security controls are implemented through documentation i.e. policies,
 examples: incident response plan (IRP), acceptable use policy (AUP)
 
 
+
 4. Encryption
 
 Self-encrypting drive (SED) = Data storage device with hardware-level encryption e.g. 
@@ -107,6 +108,46 @@ Encrypting File System (EFS) = MS windows component that enables encryption of i
 GNU privacy guard (GPG) = used to encrypt/sign data often for secure email + file encryption
 Pretty Good Privacy (PGP) = used for encrypting emails, files, and other forms of communication
 HTTPS = secures web traffic via SSL/TLS encryption
+Secure file transfer protocol (SFTP) = enables secure file transfer over ssh  (SFTP is not an extension of FTP!!)
+Secure Shell (SSH) = type of cryptographic network protocol for secure data communication and remote CLI login
+Encapsulating Security Payload (ESP) = provides authentication, integrity, confidentiality of IPsec
+Virtual private network (VPN) = system that uses a public network but creates a private encrypted connections between remote locations
+Real-time transport protocol (RTP) = unsecure real-time delivery of audio/video over an IP network
+Secure real-time transport protocol (SRTP) = same as RTP only adds authentication, encryption to secure the message
+CCMP = encryption protocol used in wi-fi networks implementing WPA2 standard
+Transport Layer Security (TLS) = provides secure commications over a network and is successor to SSL
+
+
+Techniques for encrpyting are Symmetric (secret/session key) and asymmetric (public key)
+Asymmetric encryption requires public key but the message can only be decrypted by a private-key
+Asymmetric ciphers: DHE, ECC, RSA
+Symmetric ciphers: AES, DES, IDEA, RC4
+
+KEK is just a second layer of crytographic keys that are used in key management systems.
+
+Internet Key Exchange (IKE) = used to exchange cryptographic keys in IPsec VPNs
+Diffie-Hellman Ephemeral (DHE) = key exchange protocol that generates temporary keys for each session provinding forward secrecy to protect past and future communications
+Perfect Forward Secrecy (PFS) = if one key is compromised the other session keys are not.
+ECDHE = a key exchange protrocol that leverages ECC for enhanced security and efficiency
+RSA = public key cryptosystem that uses math properties of large prime numbers to secure data  (used with SSH a lot)
+Elliptic Curve Cryptography (ECC) = ideal for low-powered devices i.e. embedded systems, IoT, mobile for cryptographic solutions
+Advanced Encryption Standard (AES) = most secure/efficient encryption algorithm in use today.  (DES, RC4, 3DES are all weak encryption algos)
+International Data Encryption Algorithm (IDEA) = symmetric block cipher encryption algorithm.  replaced by modern AES 
+Initialization Vector (IV) = is introduced in cryptography to introduce randomness into encryption.  every ciphertext will be different with the same plaintext
+Exclusive OR (XOR) = logical operation used in many cyptographic algorithms e.g. stream ciphers and encryption schemes b/c it's reversible
+
+
+Cipher block chaining (CBC) = chains the ciphertext blocks together such that each one depends on the previous block.
+Cipher Feedback (CFB) = transforms a block cipher into a stream cipher which can encrypt individual bits/bytes
+Counter mode (CTM) = block cipher mode that combines a unique counter  with encryption key that gnerates random data blocks that are used for encrypting data
+Electronic Codebook (ECB) = simplest and weakest block cipher mode.  uses same key to encrypt each block. vulnerable to pattern analysis Attacks
+Galois/Counter mode (GCM) = adds authentication + CTM and is widely used in cryptography.  much better than ECB
+
+
+The longer the key size/key length in cryptographic algorithms the stronger the key b/c the max number of combinations increases.
+AES has 3 key lengths 128, 192, 256.  
+
+
 
 5. Hashing
 
