@@ -55,3 +55,43 @@ https://www.comptia.org/certifications/security#examdetails   (Exam details)
 
 3. Security Controls
 
+logical security Controls
+aka executed by computer systems, implemented with technology
+examples: encryption, IDS (intrusion dection systems), firewalls
+
+
+managerial security controls:
+aka admin controls, aim to reduce security incidents, documented via written policies
+examples: org. security policy, risk assestments, security awareness training
+
+
+operational security controls
+aka focus on day-to-day, ensure equipment contines to work as specified, implemented primiarly by people
+examples: config management, system backups, patch management
+
+
+Physcial security controls are designed to deter, detect, and prevent unauthorized access, theft, damage, or destruction of material assets.
+example: lighting, vestibules, fencing/barricades, security guards
+
+
+preventive security controls: 
+example: sensors, warning signs, anti virus software (AV)
+
+
+deterrent security controls
+examples: warning lights, lighting, video surveillance
+
+
+detective security controls
+examples: log monitoring, CCTV, vulnerability scanning
+
+corrective security controls
+examples: recovering data from backups, disaster recovery plans (DRP), incident response plans(IRP), applying software updates
+
+compensating security controls
+examples: backup power systems, Multi-factor authentication (MFA), network segmentation
+
+directive security controls are implemented through documentation i.e. policies, procedures, guidelines
+examples: incident response plan (IRP), acceptable use policy (AUP)
+
+
