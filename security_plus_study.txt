@@ -99,3 +99,132 @@ directive security controls are implemented through documentation i.e. policies,
 examples: incident response plan (IRP), acceptable use policy (AUP)
 
 
+4. Encryption
+
+Self-encrypting drive (SED) = Data storage device with hardware-level encryption e.g. 
+Full disk encryption (FDE)  = software tech providing confidentiality to storage devices
+Encrypting File System (EFS) = MS windows component that enables encryption of individual firewalls
+GNU privacy guard (GPG) = used to encrypt/sign data often for secure email + file encryption
+Pretty Good Privacy (PGP) = used for encrypting emails, files, and other forms of communication
+HTTPS = secures web traffic via SSL/TLS encryption
+
+5. Hashing
+
+
+
+
+
+
+6. Digital Signatures
+
+
+
+
+
+7. Digital Certificates
+
+
+
+
+8. Threat Actor Types
+
+
+
+
+9. Threat Vectors & Attack Surfaces
+
+
+
+
+10. Social Engineering
+
+
+
+
+11. Security Vulnerabilities
+
+
+
+
+12. Malware Attacks
+
+
+
+
+13. Network Attacks
+
+
+
+
+14. Application Attacks
+
+
+
+
+15. Indicators of Malicious Activity
+
+
+
+
+16. Data Protection Concepts
+
+
+
+
+17. Resilience & Recovery
+
+
+
+18. Wireless Security Settings
+
+
+
+
+19. Application Security
+
+
+
+
+20. Vulnerability Management
+
+
+
+
+21. Secure Network Protocols
+
+
+
+
+22. Access Controls
+
+
+
+
+23. Password Concepts
+
+
+
+
+24. Incident Response Activities
+
+
+
+
+25. Risk Management Concepts
+
+
+
+
+
+26. Agreement Types
+
+
+
+
+
+27. Penetration Testing
+
+
+
+
+
