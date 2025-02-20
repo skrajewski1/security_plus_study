@@ -152,6 +152,24 @@ AES has 3 key lengths 128, 192, 256.
 5. Hashing
 
 
+Hash function = math algo that converts input data of any size into a fixed-size hash value.
+same input always makes the same hash value, fixed length, hash value changes even with small changes, collision resistance
+widely used in data integrity checks, signatures, password Hashing, blockchain, crptography
+
+Message Digest Algorithm (MD5) = deprecated due to collision vulnerabilies
+Secure Hash Algorithm (SHA) = several versions like SHA-256, digital signatures, password storage, secure commnications, data integrity. SHA-3 very stronger
+
+ HMAC (Hash-based Message Authentication Code) = it's SHA-256 + a secret key
+Cyclic Redundancy Check (CRC) =  non-cryptographic hash function often used for error-checking purposes
+
+
+
+
+
+
+
+
+
 
 
 
