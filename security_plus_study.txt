@@ -465,9 +465,7 @@ Blocked Content is an indicator where a firewall or security measure prevents at
 Impossible travel is a situation wherein an account is accessed from a location that is physically impossible for the user to be in
 Out of cycle logging = logs are make outside of there regular intervals/with abnormal values which might signal malicious activity
 
-
-
-
+test
 
 
 16. Data Protection Concepts
