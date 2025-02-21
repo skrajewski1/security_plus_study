@@ -508,7 +508,11 @@ access control mechanisms: ACL, FACL, DAC, MAC, RBAC
 17. Resilience & Recovery
 
 
-
+RAID 0
+Requires a minimum of 2 drives to implement
+Is also known as disk striping
+Decreases reliability (failure of any disk in the array results in the loss of all data in the array)
+Is suitable for systems where performance has higher priority than fault tolerance
 
 
 
