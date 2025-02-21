@@ -515,6 +515,20 @@ Decreases reliability (failure of any disk in the array results in the loss of a
 Is suitable for systems where performance has higher priority than fault tolerance
 
 
+RAID 1
+Requires at least 2 drives to implement
+Offers improved reliability by creating identical data sets on each drive (failure of one drive does not destroy the array as each drive contains identical copy of the data)
+Is also referred to as disk mirroring
+
+
+RAID 5
+Requires at least 3 drives to implement
+Offers increased performance and fault tolerance (single drive failure does not destroy the array and lost data can be re-created by the remaining drives)
+Is also known as disk striping with parity
+
+
+
+
 
 
 
