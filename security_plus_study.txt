@@ -457,6 +457,16 @@ for example:
 
 15. Indicators of Malicious Activity
 
+Indicator of Compromise (IoC) forensic evidence that helps detect unauthorized access attempts, malware infections, other malicious activities
+password brute-forcing attempt can cause an account lockout
+Concurrent session usage is when a single acocunt is being used from multiple locations/devices at the same time
+Blocked Content is an indicator where a firewall or security measure prevents attempt to deliver malicious payload/authorized action.
+
+Impossible travel is a situation wherein an account is accessed from a location that is physically impossible for the user to be in
+Out of cycle logging = logs are make outside of there regular intervals/with abnormal values which might signal malicious activity
+
+
+
 
 
 
