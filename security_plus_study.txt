@@ -527,6 +527,16 @@ Offers increased performance and fault tolerance (single drive failure does not 
 Is also known as disk striping with parity
 
 
+RAID 6
+Requires at least 4 drives to implement
+Offers increased performance and fault tolerance (failure of up to 2 drives does not destroy the array and lost data can be re-created by the remaining drives)
+Is also known as disk striping with double parity
+
+
+RAID 10
+Requires a minimum of 4 drives to implement
+Is referred to as stripe of mirrors, i.e., a combination of RAID 1 (disk mirroring) and RAID 0 (disk striping)
+Offers increased performance and fault tolerance (failure of one drive in each mirrored pair of disk drives does not destroy the array)
 
 
 
