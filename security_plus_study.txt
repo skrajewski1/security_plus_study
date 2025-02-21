@@ -469,6 +469,43 @@ Out of cycle logging = logs are make outside of there regular intervals/with abn
 
 16. Data Protection Concepts
 
+PII = any type of info about an individual that can be used to identify them.
+GDPR = regulates personal data privacy of EU citizens
+HIPAA = provides privacy prtection for philosophical
+PCI DSS = protects credit cardholder data
+Encryption methods used to protect data at rest = FDE, SED, EFS 
+Encryption methods used to protect data in transit = VPN, IPsec, TLS
+Require data to be processed in an unencrypted form = data in use
+Non-human readable data = machine language, binary code
+DPO = oversees compliance with data protection laws and policies within an organization
+GPS = mobile locator app
+Geofencing provides control over the usage of a mobile device within a designated area
+Encryption coverts plaintext data into ciphertext using an algorithm
+hashing takes data and converts it into fixed-sized scripting
+
+Data masking:
+    replacing sensitive data with fake/modified data while retaining its original form
+    allows for data manipulation in environments wehre the actual values are not needed
+
+
+tokenization = sensitive data is stored in a separate location but can be retrieved with non-sensitive replacement
+and can be processed just like original data without revealing the contents.
+
+Obfuscation = modifies data to make it difficult to understand/reverse engineer (not always with encryption/hiding)
+
+
+segmentation for securing data advantages
+    limits spread of cyberattacks
+    compliance i.e. isolating/protecting specific data
+    limits user access to sensitive Data
+
+
+access control mechanisms: ACL, FACL, DAC, MAC, RBAC
+
+
+
+
+
 
 
 
