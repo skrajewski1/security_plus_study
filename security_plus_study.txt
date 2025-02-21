@@ -426,6 +426,32 @@ Pass the hash = attacker uses hash of the user's password instead of the clearte
 
 14. Application Attacks
 
+code injection is how XSS attacks happen i.e inject malicious script to the user.
+LDAP injection exploits a protocol used for managing and accessing networked resources
+XML injection targets web apps that generat contnet used to store and transport data
+Buffer overflow exploits occurs when an attacker overwirtes contents of memory to cuase unpredictable results in an app.
+Replay attack intercepts and retransmits valid data exchange between an application and server or another application.
+
+
+Facilitates privilege escalation attacks
+    System/application vulnerabilities
+    System/application misconfigurations
+    Social engineering techniques
+
+
+CSRF/XSRF 
+    Exploits the trust a website has in the user's web browser
+    A user is tricked by an attacker into submitting unauthorized web requests
+    Website executes attacker's requests
+
+
+
+dot-dot-slash = directory traversal attack
+for example:
+ http://www.example.com/var/../etc/passwd
+ http://www.example.com/var/www/../../etc/passwd
+ http://www.example.com/var/www/files/../../../etc/passwd
+ http://www.example.com/var/www/files/images/../../../../etc/passwd
 
 
 
