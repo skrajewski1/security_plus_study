@@ -539,6 +539,15 @@ Is referred to as stripe of mirrors, i.e., a combination of RAID 1 (disk mirrori
 Offers increased performance and fault tolerance (failure of one drive in each mirrored pair of disk drives does not destroy the array)
 
 
+Only RAID 0 offers not fault tolerance
+Load balancing distributes workload across multiple servers for better performance
+
+
+
+
+
+
+
 
 
 
