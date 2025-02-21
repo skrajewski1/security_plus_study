@@ -336,14 +336,56 @@ websites are susceptible to watering hole Attacks e.g. attacker makes a fake web
 11. Security Vulnerabilities
 
 
+memory injection: application attack that introduces external code into address space of a running program
+
+dynamic link library (DLL): a collection of precompiled functions, allows code to be shared across programs reducing Redundancy
+DLL injection application attack that executes a library of code
+
+Buffer overflow: Application overwrites the contents of a memory area that it shouldn't have access to. can cause crashes, data corruption, or even execute malicious code
+race condition: A malfunction in a preprogrammed sequential access to a shared resource 
+TOC/TOU A type of vulnerability where the state of a resource is verified at one point in time but may change before the resource is actually used
+
+Common type of OS-based vulnerability are:
+   Access control and permissions vulnerabilities (weak passwords, privilege escalation)
+   Vulnerabilities in installed applications, system utilities, and device drivers
+   Memory-related vulnerabilities (memory leaks, buffer overflows, race conditions)
+   Patch and update management vulnerabilities (security patch and update delays, malicious updates)
+   Vulnerabilities related to system/security misconfigurations
+   Network-related vulnerabilities (DoS attacks, remote code execution attacks) 
 
 
 
+SQLi (SQL Injection) is a security vulnerability that allows an attacker to insert malicious code (typically SQL statements) into input fields, such as search bars or login forms, to manipulate or execute unauthorized commands on a database.
+example: SELECT * FROM users WHERE userName = 'Alice' AND password = '' OR '1' = '1';
+Here, the condition '1' = '1' is always true, effectively bypassing authentication by making the WHERE clause evaluate to true regardless of the username or password, allowing unauthorized access to all user records.
 
+Example of XSS (cross-site scripting) attack
+Exploits the trust a user's web browser has in a website
+A malicious script is injected into a trusted website
+User's browser executes attacker's script
+
+
+End of Life (EOL) when a product will likely not receive security patches and other updates
+
+VM escape is where the attacker breaks out of the VM and gains access to the hypervisor or host system
+Resource reuse: resources that have been properly allocated might hide a malicious VM that uses that residual data to compromise another VM.
+
+sideloading: installing mobile apps from sources other than official app stroes
+jailbreaking: removing software restrictions imposed by apple on it's iOS operating system
+rooting: gaining admin(root) access to the OS and system apps on android devicies
+
+zero-day attack: type of attack aimed at exploiting vulnerability that is present in already released software
 
 
 
 12. Malware Attacks
+
+
+
+
+
+
+
 
 
 
