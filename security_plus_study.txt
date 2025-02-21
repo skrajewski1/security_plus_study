@@ -316,9 +316,29 @@ WPA2WPA2
 10. Social Engineering
 
 
+phishing = attackers impersonate legitimate entity to get access
+vishing = voice phishing is a social engineering technique that uses telephone system i.e. calls 
+smihing = is using sms or text messages to get sensitive data
+misinformation = false or misleading info spread UNintentionally
+Disinformation = intentially spreading false info
+
+
+pretexting is social engineering that relies on identity fraud i.e. attacker impersonates someone with a legitimate need for the information, relying on identity fraud as a method of deception
+pretexting invovles creating a fabricated scenario i.e. pretext
+
+BEC (business email compromise) = type of phishing that relies on impersonating a business leader/executable
+
+websites are susceptible to watering hole Attacks e.g. attacker makes a fake website similar to the real one and steals the personal info when users login. That's brand impersonation
+
+
 
 
 11. Security Vulnerabilities
+
+
+
+
+
 
 
 
