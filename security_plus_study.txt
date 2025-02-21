@@ -50,6 +50,8 @@ https://www.examcompass.com/   (has tests, quizes to use)
 Professer Messer      (lot of free content on YouTube)
 https://www.comptia.org/certifications/security#examdetails   (Exam details)
 
+For PBQs
+Practice with labs (e.g., TryHackMe, CyberSecLabs, or CompTIA Labs) to build hands-on skills
 
 
 
@@ -381,17 +383,44 @@ zero-day attack: type of attack aimed at exploiting vulnerability that is presen
 12. Malware Attacks
 
 
+Ransomware is a type of malware that restricts access to a computer system by encrypting files or locking the entire system, 
+demanding that the user perform a specific action—typically paying a ransom—to regain access
 
 
+Trojan horse is a type of software/app that is legit but contains malicious code
+RAT (remote access trojan) is one that allows unauthorized access to infected device
 
-
-
-
+Worm is a replicating type of malicious program that can spread across networks.  It basically uses up bandwidth and system resources
+spyware gathers info about activity like keystrokes, browsing habits, personal details, without the user's knowledge
 
 
 
 13. Network Attacks
 
+DDoS (Distributed Denial of Service) attack, the attacker uses multiple compromised systems (often called zombies) that are part of a botnet to flood the target with traffic
+Amplified DDoS attack - it just sends a test (small) request to vulnerable servers followed by larger response
+
+reflected DDoS attack just uses third party servers to with the targets ip spoofed as the source.
+
+DNS amplication attack is like amplifed/reflected DDoS attacks execpt it just exploits open/misconfigured DNS resolvers to generate large traffic directed at a victim
+DNS spoofing - also called DNS cache poisoning. provide false DNS info to a DNS resolvers
+
+DNS cache poisioning Remapping a domain name to a rogue IP address
+
+domain hijacking - losing control over the domain names due to unlawful applications
+Bluesnarfing - gaining unauthorized access to a bluetooth device
+
+wireless disassociation attack e.g. deauthentication, DoS attack
+wireless jamming attack would be a DoS attack
+IV (Initialization vector) attack focuses on exploiting vulnerabilies in WEP
+
+
+on-path attack is also known as a MITM attack, attackers are on the comms route between two devices, attackers intercept/modify comms
+network replay attack = attacker captures sensitive data, resends to reciver trying to gain unauthorized access/tricking the reciver.
+
+Session ID has unique identifier, data can be sotred in cookie or embedded as URL parameter, typically stored in client browser
+Session replay attack is when the session id is taken and reused to impersonate a user.
+Pass the hash = attacker uses hash of the user's password instead of the cleartext.  Some systems accept hash passwords.
 
 
 
