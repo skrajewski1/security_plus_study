@@ -684,6 +684,28 @@ SRTP (secure real-time transport protocol) = SRTP is used to provide encryption,
 
 22. Access Controls
 
+Mandatory Access Control (MAC):
+Users are not allowed to change access policies at their own discretion
+Labels and clearance levels can only be applied and changed by an administrator
+Every resource has a sensitivity label matching a clearance level assigned to a user
+(MAC is the strictest set of access rules)
+
+RuBAC = allows for defining granular rules that consider user roles, time constraints, and network access restrictions
+
+Discretionary Access Control (DAC): access control model based on user identity.
+RBAC (Role-Based Access Control) = user permissions are based on their specific roles and responsibilities within an organization.
+
+ABAC (attribute-based access control) = access control decisions are made based on a variety of attributes (such as user roles, time, location, network access, and more)  This is the most human readable!!
+Properties of ABAC
+Subject (i.e., user or process requesting access)
+Type of action (for example "read", "write", "execute")
+Resource type (medical record, bank account etc.)
+Environment (contextual data, such as time of day or geolocation)
+
+time-of-day restrictions would be the most suitable for scheduling system maintenance task during periods of low user activity
+
+principle of least privilege is a security rule that prevents users from accessing information and resources that lie beyond the scope of their responsibilities.
+
 
 
 
@@ -692,7 +714,15 @@ SRTP (secure real-time transport protocol) = SRTP is used to provide encryption,
 
 
 
+
+
+
+
 24. Incident Response Activities
+
+
+
+
 
 
 
@@ -703,7 +733,13 @@ SRTP (secure real-time transport protocol) = SRTP is used to provide encryption,
 
 
 
+
+
+
 26. Agreement Types
+
+
+
 
 
 
