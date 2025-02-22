@@ -46,12 +46,14 @@ Use these notes as you please.  Hope they help and thank you for reading!
 
 2. Resources
 
-https://www.examcompass.com/   (has tests, quizes to use)
+https://www.examcompass.com/   (tests, quizes to use)
 Professer Messer      (lot of free content on YouTube)
-https://www.comptia.org/certifications/security#examdetails   (Exam details)
+(Exam details) https://www.comptia.org/certifications/security#examdetails  
+(exam objectives) https://www.examcompass.com/images/comptia-security-plus-sy0-701-exam-objectives-v5.pdf
 
 For PBQs
 Practice with labs (e.g., TryHackMe, CyberSecLabs, or CompTIA Labs) to build hands-on skills
+
 
 
 
@@ -99,6 +101,7 @@ examples: backup power systems, Multi-factor authentication (MFA), network segme
 
 directive security controls are implemented through documentation i.e. policies, procedures, guidelines
 examples: incident response plan (IRP), acceptable use policy (AUP)
+
 
 
 
@@ -315,6 +318,7 @@ WPA2WPA2
 
 
 
+
 10. Social Engineering
 
 
@@ -331,6 +335,7 @@ pretexting invovles creating a fabricated scenario i.e. pretext
 BEC (business email compromise) = type of phishing that relies on impersonating a business leader/executable
 
 websites are susceptible to watering hole Attacks e.g. attacker makes a fake website similar to the real one and steals the personal info when users login. That's brand impersonation
+
 
 
 
@@ -380,6 +385,7 @@ zero-day attack: type of attack aimed at exploiting vulnerability that is presen
 
 
 
+
 12. Malware Attacks
 
 
@@ -392,6 +398,7 @@ RAT (remote access trojan) is one that allows unauthorized access to infected de
 
 Worm is a replicating type of malicious program that can spread across networks.  It basically uses up bandwidth and system resources
 spyware gathers info about activity like keystrokes, browsing habits, personal details, without the user's knowledge
+
 
 
 
@@ -421,6 +428,7 @@ network replay attack = attacker captures sensitive data, resends to reciver try
 Session ID has unique identifier, data can be sotred in cookie or embedded as URL parameter, typically stored in client browser
 Session replay attack is when the session id is taken and reused to impersonate a user.
 Pass the hash = attacker uses hash of the user's password instead of the cleartext.  Some systems accept hash passwords.
+
 
 
 
@@ -455,6 +463,8 @@ for example:
 
 
 
+
+
 15. Indicators of Malicious Activity
 
 Indicator of Compromise (IoC) forensic evidence that helps detect unauthorized access attempts, malware infections, other malicious activities
@@ -464,6 +474,7 @@ Blocked Content is an indicator where a firewall or security measure prevents at
 
 Impossible travel is a situation wherein an account is accessed from a location that is physically impossible for the user to be in
 Out of cycle logging = logs are make outside of there regular intervals/with abnormal values which might signal malicious activity
+
 
 
 
@@ -614,6 +625,7 @@ CAPTCHA is used a countermeasure againts automated software like network bots.
 
 
 
+
 20. Vulnerability Management
 
 
@@ -670,6 +682,7 @@ Delaying or forgoing a patch for a specific system, e.g., when applying a patch 
 
 
 
+
 21. Secure Network Protocols
 
 
@@ -679,6 +692,7 @@ FTPS = runs on TCP port 990 (implicit)  or TCP port 21 (explicit).  Uses SSL/TLS
 SMTPS is deprecated, used for emails, now we use SMTP with STARTTLS
 IMAPS and POP3S = allow for secure retrieval of emails from a mail server to an email client by encrypting the communication using SSL/TLS
 SRTP (secure real-time transport protocol) = SRTP is used to provide encryption, authentication and integrity for real time multimedia communciation like video/audio calls over ip networks
+
 
 
 
@@ -708,8 +722,8 @@ principle of least privilege is a security rule that prevents users from accessi
 
 
 
-23. Password Concepts
 
+23. Password Concepts
 
 Max password age policy is the most effective in decreasing the risk of a security breach
 
@@ -718,6 +732,8 @@ data masking = Replacing password characters in a password field with a series o
 Salt = random data added to a password before hashing.  countermeasure against brute-force, dictionary, and rainbow table attacks
 "Pass the hash" attack, an attacker uses a hashed version of the password (instead of the cleartext password) to authenticate to a remote server.
 spraying attack involves trying a small set of commonly used passwords (often very simple or popular ones) against a large number of user accounts. it bypasses account-lockout policies
+
+
 
 
 24. Incident Response Activities
@@ -753,11 +769,46 @@ E-discovery (electronic discovery) refers to the process of identifying, collect
 for use in legal proceedings or investigations.
 
 
+
+
 25. Risk Management Concepts
 
+risk assessment = process of determining potential risks that could affect an organization's ability to achieve its objectives
+risk analysis = The process of evaluating discovered risks to understand their potential impact and likelihood 
+Ad hoc =  risk assessment method based on need, typically conducted in response to specific events or changes, such as after a major organizational change or a security breach
+Quarterly or annual risk assessments  are an example of recurring risk assesstment
+One-time risk assesstment = has a specific purpose i.e. for a new product lauch
+Real-time monitoring of network security threats is an example of continous risk assessment
 
 
+Qualitative risk assessment = is based on subjective judgment and focuses on the likelihood and impact of risks, 
+often using descriptive terms like "high," "medium," and "low" rather than numerical values.
 
+Single loss expectancy (SLE) = involves numerical values to estimate the potential financial impact of a risk.  Example of quatitative risk assessement
+ALE (Annual Loss Expectancy) = estimated yearly financial loss due to a specific risk, calculated by multiplying the Single Loss Expectancy (SLE) by the Annual Rate of Occurrence (ARO).
+
+
+SLE=Asset Value (AV)×Exposure Factor (EF)
+
+Risk register = omprehensive document used in risk management and project management to identify, assess, and track risks
+Risk tolerance = refers to specific level of risk an org is willing to accept to accomplish goals
+Risk appetite = general term that describes an organization’s overall attitude towards risk-taking
+
+example of Risk transference:   Contracting out a specialized technical component when the company's employees lack the necessary skill
+example of cyber insurance:   Cybersecurity insurance transfers the financial risk of a cyber incident to the insurance company, meaning the organization is shifting the burden of potential financial loss to another party.
+
+Exemption =  choosing not to apply certain controls or safeguards for a specific risk
+Execption = the practice of temporarily not complying with a standard or policy due to a specific risk scenario
+
+risk avoidance = for example, disabling certain system functions or shutting down the system when risks are identified
+risk mitigation = the process of taking proactive measures to reduce the impact of identified risks
+
+
+Recovery time objective (RTO) = maximum allowable time to restore critical business functions after a disruption
+Recovery point objective = maximum acceptable amount of data loss measured by a specific point in time before a disaster or outage
+MTTR (Mean Time to Repair) = is used to describe the average time required to repair a failed component or device
+high MTBF (Mean Time Between Failures) value indicates that a component or system provides high reliability and is less likely to fail
+MTTF (mean time to failure) = metric that represents the average amount of time a device or system is expected to operate before experiencing its first failure 
 
 
 
