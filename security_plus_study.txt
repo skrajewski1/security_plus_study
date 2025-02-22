@@ -708,7 +708,6 @@ principle of least privilege is a security rule that prevents users from accessi
 
 
 
-
 23. Password Concepts
 
 
@@ -718,22 +717,40 @@ Can be used as passowrdless auth: biometrics, hardware towkens, qr codes, otps, 
 data masking = Replacing password characters in a password field with a series of asterisks
 Salt = random data added to a password before hashing.  countermeasure against brute-force, dictionary, and rainbow table attacks
 "Pass the hash" attack, an attacker uses a hashed version of the password (instead of the cleartext password) to authenticate to a remote server.
- spraying attack involves trying a small set of commonly used passwords (often very simple or popular ones) against a large number of user accounts. it bypasses account-lockout policies
-
-
-
-
-
-
+spraying attack involves trying a small set of commonly used passwords (often very simple or popular ones) against a large number of user accounts. it bypasses account-lockout policies
 
 
 24. Incident Response Activities
 
 
+Preparation stage
+phase involves establishing and maintaining the incident response capability, 
+setting up an incident response team, developing incident response plans, and 
+preparing necessary tools and resources to respond to security incidents effectively.
 
 
+Detection and analysis stage
+involves identifying and understanding potential incidents to determine their scope, impact, and root cause
 
 
+Containment, eradication, and recovery stage
+Restoring normal operations
+Eliminating the threat
+Mitigating the impact of the incident
+
+
+Post-incident activity stage
+involves updating incident response plans, policies, and procedures
+
+
+Threat hunting is actively search for indicators of compromise (IoCs) before they evolve into more serious incidents
+
+
+chain of custody refers to the documented process that tracks the handling, movement, and storage of evidence to ensure its integrity and admissibility in court.
+(basically evidence isn't tampered with) 
+
+E-discovery (electronic discovery) refers to the process of identifying, collecting, and producing electronically stored information (ESI) 
+for use in legal proceedings or investigations.
 
 
 25. Risk Management Concepts
