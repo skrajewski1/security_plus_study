@@ -765,15 +765,40 @@ for use in legal proceedings or investigations.
 26. Agreement Types
 
 
+SLA (service level agreement) = an agreement that specifies performance requirements for a vendor
 
+MSA (Master Service Agreement) = formal and often legally binding document that outlines specific responsibilities, roles, and terms agreed upon by two or more parties
 
+MOU (Memorandum of Understanding) = nonbinding agreement that outlines the mutual goals and general framework for cooperation between two or more parties
+
+Work Order (WO) is a document that authorizes, initiates, and tracks the progress and completion of a particular job or task. 
+
+Statement of Work (SOW) is a detailed agreement between a client and a vendor that describes the specific work to be performed on a project.
+
+NDA (Non-Disclosure Agreement) is a legal contract that restricts the person receiving confidential information from disclosing it to others. 
+
+BPA (Business Partnership Agreement) is a formal contract between business partners outlining their rights, responsibilities, and obligations, 
+including details about the management, operation, and decision-making processes within the business.
 
 
 
 
 27. Penetration Testing
 
+Penetration testing:
+Bypasses security controls
+Actively tests security controls
+Exploits vulnerabilities
 
 
+red team = attacker
+blue team = defender
+White team = overseer
+purple team = combo of both red/blue
 
+white-box = A penetration test performed by an authorized professional with the full prior knowledge on how the system that is to be tested works
+grey-box = A penetration test in which the person conducting the test has limited access to information on the internal workings of the targeted system
+black-box = A penetration test of a computer system performed without prior knowledge of how the system that is to be tested works 
 
+Penetration testing = involves gathering any type of publicly available information that can be used later for exploiting vulnerabilities found in the targeted system
+Active reconnaissance = passive reconnaissance relies on gathering information on the targeted system with the use of various non-invasive software tools and techniques, such as pinging, port scanning, or OS fingerprinting
