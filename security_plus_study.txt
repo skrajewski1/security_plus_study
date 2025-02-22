@@ -712,6 +712,15 @@ principle of least privilege is a security rule that prevents users from accessi
 23. Password Concepts
 
 
+Max password age policy is the most effective in decreasing the risk of a security breach
+
+Can be used as passowrdless auth: biometrics, hardware towkens, qr codes, otps, passkeys 
+data masking = Replacing password characters in a password field with a series of asterisks
+Salt = random data added to a password before hashing.  countermeasure against brute-force, dictionary, and rainbow table attacks
+"Pass the hash" attack, an attacker uses a hashed version of the password (instead of the cleartext password) to authenticate to a remote server.
+ spraying attack involves trying a small set of commonly used passwords (often very simple or popular ones) against a large number of user accounts. it bypasses account-lockout policies
+
+
 
 
 
