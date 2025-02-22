@@ -590,6 +590,16 @@ PEAP (Protected Extensible authentication protocol) = open standard wireless net
 
 19. Application Security
 
+Critical to secure app developemnt: 
+Input validation   (e.g. web form field accepting data from server commands)  
+error and exception handling
+
+Input validation helps protect against SQL injection, command injection, and cross-site scripting (XSS)
+
+
+
+
+
 
 
 
