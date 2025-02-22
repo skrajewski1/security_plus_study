@@ -595,10 +595,21 @@ Input validation   (e.g. web form field accepting data from server commands)
 error and exception handling
 
 Input validation helps protect against SQL injection, command injection, and cross-site scripting (XSS)
+secure cookie  = type of http cookie that is enrypted over HTTPS that prevents it from being intercepted/tampered during transit
+static code analysis = manual review of code to dectect logic/syntax errors.   you are not running the code to see errors (i.e. it's static)
+dynamic code analysis = requires actual execution of the code to identify flaws
+
+code signing purpose:
+confirm apps source of origin  
+validates apps integrity
+
+Fuzzing = Security technique that invovles testing an app by feeding it incorrect input
+Sandboxing = running code in an isolated manner to test how it affects the system.  used in malware analysis, browser security.
+Structured Exception Handling (SEH) = a Windows feature  for handling execptions, errors and abnormal conditions in software
 
 
-
-
+Address Space Layout Randomization (ASLR) = randomizes the location of key data in areas of memory. defense against memory based attacks like buffer overflows
+CAPTCHA is used a countermeasure againts automated software like network bots.
 
 
 
