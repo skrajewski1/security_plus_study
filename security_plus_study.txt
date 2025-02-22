@@ -617,6 +617,57 @@ CAPTCHA is used a countermeasure againts automated software like network bots.
 20. Vulnerability Management
 
 
+vulnerability scanning:
+Identifies lack of security controls
+Identifies common misconfigurations
+Passively tests security controls
+
+Features of Static Code Analysis:
+Involves examining the code without executing it
+Often used early in the development process
+Examines code structure, syntax, and semantics to detect issues like syntax errors, coding standards violations, security vulnerabilities, and bugs
+
+Features of Dynamic Code Analysis:
+Typically used later in the software development lifecycle
+Analyzes runtime properties like memory usage, performance, and error handling to identify issues such as memory leaks, performance bottlenecks, and runtime errors
+Involves executing the code and analyzing its behavior at runtime
+
+Package monitoring = tacking and managing software app components such as 3rd party libraries and other dependencies
+Open Source Intelligence (OSINT) = threat intelligence from public data sources
+Automated Indicator SHaring (AIS) = us gov initiative for real-time sharing of cyber threat indicators
+
+
+Structured threat informaiton expression (STIX) = common language for describing cyber threat information
+Trusted Automated eXchange of Indicator Information (TAXII) = transport mechanism for cyber threat information (it's designed for sharing cyber intel in combo with STIX)
+
+Tactics, Techniques, and procedures (TTP) = insignts into the methods and tools used by cybercriminals to carry out attacks
+
+Penetration testing:
+Bypasses security controls
+Actively tests security controls
+Exploidts vulnerabilities
+
+
+Responsible disclosure program encourages: security research, ethical hackers, report vulnerabilies, and bug bounty program ($$ for finding valid vulnerabilies)
+False positive error = antivirus software identifyig non-malicious file as a virus due to faulty virus signature
+False negative = situation where an attack occure but no alarm or alert is raised i.e. undectected attack.
+FRR (false rejection rate) = measures the likelihood that a security system will incorrectly reject an acess attpempt by an authroised user
+ATT&CK (Adversarial Tactics, Techniques, and Common Knowledge) =  framework that provides a detailed understanding of the tactics, techniques, and procedures (TTPs) used by adversaries during cyberattacks.
+CVSS (Common Vulnerability Scoring System) = ndustry standard used for assessing and scoring the severity of computer system security vulnerabilities, providing a way to evaluate their impact based on factors like exploitability and potential damage.
+CVE (Common Vulnerabilities and Exposures) =  refers to a system that identifies, defines, and catalogs publicly known cybersecurity vulnerabilities.
+
+
+EF (exposure factor) = degree of loss that a realized threat would have on a specific assets
+
+
+Examples of vulnerability response and remediation techniques:
+Applying updates or fixes provided by software vendors to address the vulnerability (patching)
+Ensuring financial recovery from the costs associated with a successful cyberattack (insurance) 
+Dividing a network into smaller, isolated zones to limit the potential impact of a vulnerability (segmentation)
+Mitigating the risk associated with a vulnerability that cannot be immediately patched by implementing alternative security measures (compensating controls)
+Delaying or forgoing a patch for a specific system, e.g., when applying a patch may not be feasible due to compatibility issues or potential disruptions to critical systems (exceptions and exemptions)
+
+
 
 
 21. Secure Network Protocols
