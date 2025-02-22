@@ -673,6 +673,13 @@ Delaying or forgoing a patch for a specific system, e.g., when applying a patch 
 21. Secure Network Protocols
 
 
+HTTPS = secure webrowsing
+Secure file transfer are = FTPS (FTP secure) and SFTP (ssh FTP)
+FTPS = runs on TCP port 990 (implicit)  or TCP port 21 (explicit).  Uses SSL/TLS to secure the connection.  SFTP uses ssh protocol
+SMTPS is deprecated, used for emails, now we use SMTP with STARTTLS
+IMAPS and POP3S = allow for secure retrieval of emails from a mail server to an email client by encrypting the communication using SSL/TLS
+SRTP (secure real-time transport protocol) = SRTP is used to provide encryption, authentication and integrity for real time multimedia communciation like video/audio calls over ip networks
+
 
 
 22. Access Controls
