@@ -561,16 +561,29 @@ Power distribution unit (PDU) = is a device to supply and monitor the quality of
 Uninterruptible power supply (UPS) = provides short-term emergency power during an unexpected main power outtage.  devices can continue operating for a limited time so that they can have a normal shutdown
 
 
-
-
-
-
 18. Wireless Security Settings
 
 
+You should change default configs with devices from the manufacture (best practice)
+PINs are used in bluetooth device pairings
+WPA3-SAE (Simultaneous Authentication of Equals) offers the strongest security for a small network that lacks an authentication server
 
 
+WPA2/WPA3 Enterprise mode are:
+Suitable for large corporate networks
+IEEE 802.1X
+Requires RADIUS authentication server
 
+AES-GCMP = The encryption protocol primarily used in Wi-Fi networks implementing the WPA3 security standard 
+
+
+RADIUS are:
+Primarily used for network access
+Combines authentication and authorization
+Encrypts only the password in the access-request packet
+
+LEAP (lightweight extensible authentication protocol) = now deprecated, wireless auth protocol by Cisco  (EAP TTLS or EAP-TLS are recommended)
+PEAP (Protected Extensible authentication protocol) = open standard wireless network auth that encapsulates auth process in encrypted TLS tunnel
 
 
 
