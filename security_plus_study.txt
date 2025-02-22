@@ -541,10 +541,24 @@ Offers increased performance and fault tolerance (failure of one drive in each m
 
 Only RAID 0 offers not fault tolerance
 Load balancing distributes workload across multiple servers for better performance
+Primary reason why we cluster is to provide high availability and fault tolerance
 
 
+Hot site is a fully operational duplicate of the original site
+Warm site that has some pre-installed hardware and network configurations, but it requires additional setup before becoming fully operational
+cold site provides only the physical space, such as power, cooling, and networking, but lacks the necessary hardware, software, and data.
 
-
+Continuity of Operations plan
+Tabletop exercise = hypothetical conducted in a controlled environment
+Fail over = switching to redudant system when the original has failed.
+Simulation = semi real incident used to assess dectection response.
+Parallel processing = provides redundancy + fault tolerance by dividing tasks into smaller subtasks and distributing across multiple systems to be executed simultaneously
+snapshot = file-based representation of the state of a vitual machine  (let's you revert to this state later if you want too)
+snapshot backups = commonly used with virtual machines
+replication = create real-time backups on another system
+journaling = allows you to recover chagnes made since last backup
+Power distribution unit (PDU) = is a device to supply and monitor the quality of electric power to multiple outlets  (used in data centers)
+Uninterruptible power supply (UPS) = provides short-term emergency power during an unexpected main power outtage.  devices can continue operating for a limited time so that they can have a normal shutdown
 
 
 
