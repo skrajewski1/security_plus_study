@@ -31,6 +31,7 @@ Author: Sean Krajewski
 25. Risk Management Concepts
 26. Agreement Types
 27. Penetration Testing
+28. Blockchain 
 
 
 1. Note to Reader 
@@ -108,9 +109,14 @@ CIA triad = confidentiality, integrity, availability   (CIA is basic to informat
 
 AAA = Authentication, authorization, accounting   (e.g. TACACS+ and RADIUS)
 Remote Authentication Dial-In User Service (RADIUS) is widely used for providing centralized AAA (especially in wireless netowrks/remote server access)
+Identification: This is the initial step where a user claims an identity, usually with a username or email address, but does not involve proving that identity.
+Authorization: This process occurs after authentication and involves granting access to resources based on the authenticated identity‘s permissions.
+Accounting: Accounting involves logging and tracking user activities, not the verification of user credentials.
 
 authentication methods for people = usernames/passwords, biometrics, MFA
 authentication methods for devices = digital certificates, MFA, MAC addresses
+embedded certificate in a smart card holds the user's private key, which is crucial for secure authentication processes
+
 
 
 Policy Enforcement Point (PEP) = Data Plane component that enforces the security policies defined at the Control Plane by the Policy Decision Point (PDP)
@@ -120,12 +126,21 @@ Honeynet = network of honeypots
 Honeypots can be fake websites, databases, files, or servers
 Honeyfile contains decoy data i.e. it's fake
 Honeyfile is designed to attrack attackers, trigger alerts when accessed, monitor network activity
+example: employee_salaries.docx
 Honeytoken = designed to track attackers
 
 Reverse Proxy: While it can distribute traffic, its primary role is not load balancing but rather routing client requests to the appropriate server.
 VPN Gateway: This is used for secure remote access and does not address the specific requirement of load balancing.
 Firewall: A firewall‘s main function is to provide security by monitoring and controlling incoming and outgoing network traffic, not load balancing.
 load balancer is the ideal solution for managing high traffic and evenly distributing network load across multiple servers
+
+Wireless jamming attack
+example: fluctuating wireless connectivity in the office, with the network being inaccessible on certain days but functioning well on others
+
+
+
+
+
 
 4. Encryption
 
@@ -192,9 +207,10 @@ SHTTP = secure hypertext transfer protocol, it's obsolete for data transfer over
 5. Hashing
 
 
-Hash function = math algo that converts input data of any size into a fixed-size hash value.
+Hash = math algo that converts input data of any size into a fixed-size hash value.
 same input always makes the same hash value, fixed length, hash value changes even with small changes, collision resistance
 widely used in data integrity checks, signatures, password Hashing, blockchain, crptography
+purpose is generate a unique fixed-size output from any input data for integrity verification
 
 Message Digest Algorithm (MD5) = deprecated due to collision vulnerabilies
 Secure Hash Algorithm (SHA) = several versions like SHA-256, digital signatures, password storage, secure commnications, data integrity. SHA-3 very stronger
@@ -412,6 +428,7 @@ DLL injection application attack that executes a library of code
 
 Buffer overflow: Application overwrites the contents of a memory area that it shouldn't have access to. can cause crashes, data corruption, or even execute malicious code
 race condition: A malfunction in a preprogrammed sequential access to a shared resource 
+This involves overrunning a buffer‘s boundary in memory, leading to crashes or execution of malicious code, not related to SQL query manipulation
 TOC/TOU A type of vulnerability where the state of a resource is verified at one point in time but may change before the resource is actually used
 
 Common type of OS-based vulnerability are:
@@ -438,6 +455,12 @@ Exploits the trust a user's web browser has in a website
 A malicious script is injected into a trusted website
 User's browser executes attacker's script
 Example of XSS is an attacker injects a malicious script into a comment on a blog, which is then executed by other users‘ browsers, leading to data theft.
+Example:
+1. Request from IP: 192.0.2.15 – URL: http://webapp.com/search?q=
+2. Request from IP: 198.51.100.30 – URL: http://webapp.com/comment?text=
+3. Request from IP: 203.0.113.60 – URL: http://webapp.com/login?username=
+
+
 
 
 CSRF (cross-site request forgery) = attacker tricks the user‘s browser into submitting a request to a different 
@@ -468,6 +491,18 @@ demanding that the user perform a specific action—typically paying a ransom—
 
 Trojan horse is a type of software/app that is legit but contains malicious code
 RAT (remote access trojan) is one that allows unauthorized access to infected device
+example:
+The batch file, named sync.bat and located at C:\Windows\Tasks\, contains the following commands:
+1. @echo off
+2. rem Sync system data
+3. net use Z: \\10.0.0.150\data_share /user:sync_user /p:yes
+4. Z:\tools\sync_tool.exe
+5. net use Z: /delete
+
+
+
+
+
 
 Worm is a replicating type of malicious program that can spread across networks.  It basically uses up bandwidth and system resources
 spyware gathers info about activity like keystrokes, browsing habits, personal details, without the user's knowledge
@@ -535,6 +570,10 @@ Facilitates privilege escalation attacks
     System/application vulnerabilities
     System/application misconfigurations
     Social engineering techniques
+After obtaining initial access through a low-privileged account during a penetration test, the next crucial step is to perform privilege escalation. 
+This process involves exploiting vulnerabilities or misconfigurations in the system to gain higher-level privileges, such as administrative access
+
+
 
 
 CSRF/XSRF 
@@ -687,7 +726,7 @@ Uninterruptible power supply (UPS) = provides short-term emergency power during 
 
 
 BIA (Business Impact Analysis) = assesses potential impact of incidents on critical functions/operations
-
+identify and prioritize essential systems and workflows necessary for patient care continuity after a disruption.
 
 
 18. Wireless Security Settings
@@ -710,6 +749,11 @@ RADIUS are:
 Primarily used for network access
 Combines authentication and authorization
 Encrypts only the password in the access-request packet
+
+
+EAP is primarily used in network security as a framework for various authentication mechanisms
+It allows two systems to authenticate each other and to establish a secure encryption key for data transmission, which is essential in environments like wireless networks.
+
 
 LEAP (lightweight extensible authentication protocol) = now deprecated, wireless auth protocol by Cisco  (EAP TTLS or EAP-TLS are recommended)
 PEAP (Protected Extensible authentication protocol) = open standard wireless network auth that encapsulates auth process in encrypted TLS tunnel
@@ -773,7 +817,8 @@ Analyzes runtime properties like memory usage, performance, and error handling t
 Involves executing the code and analyzing its behavior at runtime
 
 Package monitoring = tacking and managing software app components such as 3rd party libraries and other dependencies
-Open Source Intelligence (OSINT) = threat intelligence from public data sources
+Open Source Intelligence (OSINT) = threat intelligence from public data sources; practice of gathering and analyzing information from publicly available sources to assess cyber threats and vulnerabilities.
+
 Automated Indicator SHaring (AIS) = us gov initiative for real-time sharing of cyber threat indicators
 
 
@@ -781,6 +826,13 @@ Structured threat informaiton expression (STIX) = common language for describing
 Trusted Automated eXchange of Indicator Information (TAXII) = transport mechanism for cyber threat information (it's designed for sharing cyber intel in combo with STIX)
 
 Tactics, Techniques, and procedures (TTP) = insignts into the methods and tools used by cybercriminals to carry out attacks
+
+Policy: High-level documents outlining the organization‘s overall stance and approach to cybersecurity.
+Standard: Specific, often technical requirement for how something should be done or built.
+Guideline: Recommendations or best practices for various cybersecurity activities.
+Procedure: offer detailed, actionable instructions for completing specific tasks within an organization‘s cybersecurity framework
+
+Due Care in the context of cybersecurity refers to the ongoing commitment and effort to maintain a secure environment.
 
 Penetration testing:
 Bypasses security controls
@@ -882,7 +934,7 @@ Salt = random data added to a password before hashing.  countermeasure against b
 "Pass the hash" attack, an attacker uses a hashed version of the password (instead of the cleartext password) to authenticate to a remote server.
 spraying attack involves trying a small set of commonly used passwords (often very simple or popular ones) against a large number of user accounts. it bypasses account-lockout policies
 
-
+ Hardware Security Module (HSM) primary function in a network security environment: generate and store RSA encryption keys, providing hardware-based encryption
 
 
 24. Incident Response Activities
@@ -916,11 +968,15 @@ chain of custody refers to the documented process that tracks the handling, move
 
 E-discovery (electronic discovery) refers to the process of identifying, collecting, and producing electronically stored information (ESI) 
 for use in legal proceedings or investigations.
+process of identifying, collecting, and producing electronically stored information in response to a request in legal cases
 
 
 
 
 25. Risk Management Concepts
+
+Risk = the likelihood or probability that a threat could exploit a vulnerability in a system, potentially leading to negative consequences for an organization
+Threat example: receiving a phishing email claiming to be from a vendor
 
 risk assessment = process of determining potential risks that could affect an organization's ability to achieve its objectives
 risk analysis = The process of evaluating discovered risks to understand their potential impact and likelihood 
@@ -956,6 +1012,7 @@ Execption = the practice of temporarily not complying with a standard or policy 
 
 risk avoidance = for example, disabling certain system functions or shutting down the system when risks are identified
 risk mitigation = the process of taking proactive measures to reduce the impact of identified risks
+example:  identifying a software flaw, a company immediately works on a fix
 
 
 Recovery time objective (RTO) = maximum allowable time to restore critical business functions after a disruption
@@ -966,6 +1023,14 @@ MTTF (mean time to failure) = metric that represents the average amount of time 
 
 
 Backout plan = A backout plan is essential for safely reversing changes that do not work as expected, ensuring minimal impact on system operations.
+
+Secure Access Service Edge (SASE) = cybersecurity frameworks is best suited for integrating networking and security services into a single, cloud-based platform to support the evolving secure access needs of organizations
+SASE architecture encompasses key functions like SD-WAN, Firewall-as-a-Service (FWaaS), and Zero-Trust Network Access
+
+Containerization is the most suitable technology for isolating critical applications within a shared physical server environment.
+
+OWASP (Open Web Application Security Project) = most beneficial resource for software developers looking to improve secure coding practices in web applications
+
 
 
 
@@ -1010,3 +1075,17 @@ black-box = A penetration test of a computer system performed without prior know
 
 Penetration testing = involves gathering any type of publicly available information that can be used later for exploiting vulnerabilities found in the targeted system
 Active reconnaissance = passive reconnaissance relies on gathering information on the targeted system with the use of various non-invasive software tools and techniques, such as pinging, port scanning, or OS fingerprinting
+
+
+
+28. Blockchain
+
+how does blockchain technology ensure the integrity and security of transactions: By storing each transaction in an immutable chain of blocks, where each block is linked to the previous one through a unique hash
+
+
+
+
+
+
+
+
