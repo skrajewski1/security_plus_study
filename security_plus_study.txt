@@ -32,6 +32,7 @@ Author: Sean Krajewski
 26. Agreement Types
 27. Penetration Testing
 28. Blockchain 
+29. Linux
 
 
 1. Note to Reader 
@@ -113,10 +114,17 @@ Identification: This is the initial step where a user claims an identity, usuall
 Authorization: This process occurs after authentication and involves granting access to resources based on the authenticated identity‘s permissions.
 Accounting: Accounting involves logging and tracking user activities, not the verification of user credentials.
 
+Kerberos is an authentication protocol designed for secure client-server mutual authentication and is highly suitable for large, distributed environments
+Secure, mutual authentication, Minimized password transmission
+
 authentication methods for people = usernames/passwords, biometrics, MFA
 authentication methods for devices = digital certificates, MFA, MAC addresses
 embedded certificate in a smart card holds the user's private key, which is crucial for secure authentication processes
 
+EDR (Endpoint Detection and Response) = continuously monitors and analyzes its endpoints for malicious activities and anomalies, and can respond to threats in real-time
+Intrusion Detection System (IDS): IDS monitors network traffic for suspicious activities
+Network Address Translation (NAT): NAT is used for IP address mapping 
+Network Access Control (NAC): NAC manages network access based on compliance policies
 
 
 Policy Enforcement Point (PEP) = Data Plane component that enforces the security policies defined at the Control Plane by the Policy Decision Point (PDP)
@@ -133,6 +141,11 @@ Reverse Proxy: While it can distribute traffic, its primary role is not load bal
 VPN Gateway: This is used for secure remote access and does not address the specific requirement of load balancing.
 Firewall: A firewall‘s main function is to provide security by monitoring and controlling incoming and outgoing network traffic, not load balancing.
 load balancer is the ideal solution for managing high traffic and evenly distributing network load across multiple servers
+
+
+Vertical Scaling refers to the process of adding more resources to an existing server to increase its capacity.
+
+
 
 Wireless jamming attack
 example: fluctuating wireless connectivity in the office, with the network being inaccessible on certain days but functioning well on others
@@ -202,6 +215,12 @@ AES has 3 key lengths 128, 192, 256.
 
 SHTTP = secure hypertext transfer protocol, it's obsolete for data transfer over the web.
 
+For email security:
+DMARC (Domain-based Message Authentication, Reporting, and Conformance) = defines how emails should be handled if they fail DKIM or SPF checks
+DKIM (DomainKeys Identified Mail) = Provides a method for the recipient to verify that the email content hasn‘t been altered during transmission  (adds digital cert to email)
+SPF (Sender Policy Framework) = Allows the domain owner to specify authorized mail servers permitted to send emails on their behalf  (no email spoofing)
+
+
 
 
 5. Hashing
@@ -253,6 +272,8 @@ Self signed dig. certs. are not trusted by default by web browsers/applications,
 Self  signed certs are free and have no identity validaton.  third party certs cost and require identity validation
 
 Certificate Signing Request (CSR) = file that contains information to send to the cert authority (CA).  CSR contains info about entity, public key, identifying details which CA uses to issue the digital cert
+The initial step involves creating an RSA-based private key, which is then used to generate the public key included in the CSR
+
 
 
 Wildcard certificate is used to secure multiple subdomains under a primary domain.
@@ -476,7 +497,7 @@ End of Life (EOL) when a product will likely not receive security patches and ot
 VM escape is where the attacker breaks out of the VM and gains access to the hypervisor or host system
 Resource reuse: resources that have been properly allocated might hide a malicious VM that uses that residual data to compromise another VM.
 
-sideloading: installing mobile apps from sources other than official app stroes
+sideloading: installing mobile apps from sources other than official app stores (installs apps from APK files)
 jailbreaking: removing software restrictions imposed by apple on it's iOS operating system
 rooting: gaining admin(root) access to the OS and system apps on android devicies
 
@@ -674,11 +695,14 @@ Data masking:
 tokenization = sensitive data is stored in a separate location but can be retrieved with non-sensitive replacement
 and can be processed just like original data without revealing the contents.
 
+Time-based One-Time Password (TOTP) example: a token generates new codes automatically at regular intervals, such as every 60 seconds.
+
 Key Stretching is a technique used to enhance the security of stored passwords. It involves applying a cryptographic hash function to the password and then repeating the process multiple times. 
 This increases the computational time and effort required to crack the password through brute-force attacks, making simple or short passwords more resistant to such attacks.
 
 Obfuscation = modifies data to make it difficult to understand/reverse engineer (not always with encryption/hiding)
 for example: tokenization where sensitive data is replaced with unique identification symbols (tokens) that retain all the essential information about the data without compromising its security.
+examples of Obfuscation: tokenization, data masking, steganography
 
 
 segmentation for securing data advantages
@@ -695,6 +719,17 @@ FDE (full disk encryption) = provides confidentiality for an entire data storage
 EFS (encrypting file system) = MS windows component that enables encrytpition of individual files
 
 
+Static Knowledge-Based Authentication (KBA) involves answering predefined personal questions, which the user has previously set up or agreed upon with the service provider
+Dynamic KBA: This involves questions generated in real-time based on publicly available information
+
+Biometric Authentication: This type of authentication uses biological characteristics, such as fingerprints or facial recognition
+most critical metric is False Acceptance Rate (FAR); you want this as low as possible
+False Rejection Rate (FRR)
+Crossover Error Rate (CER)
+True Acceptance Rate (TAR): TAR measures the rate of correctly authenticating authorized individuals
+
+
+Two-Factor Authentication: This requires two different methods of proving identity
 
 
 
@@ -766,6 +801,7 @@ identify and prioritize essential systems and workflows necessary for patient ca
 You should change default configs with devices from the manufacture (best practice)
 PINs are used in bluetooth device pairings
 WPA3-SAE (Simultaneous Authentication of Equals) offers the strongest security for a small network that lacks an authentication server
+802.1X is a network access control protocol that, when used in conjunction with WPA3, provides a robust security framework for Wi-Fi networks.
 
 
 WPA2/WPA3 Enterprise mode are:
@@ -796,6 +832,9 @@ using their existing social media or other service provider accounts without sha
 
 SAML is a widely used Single Sign-On (SSO) protocol designed for enterprise environments.
 allows employees to log in once and gain access to multiple cloud-based and internal applications without needing to re-authenticate for each service.
+
+Secure Web Gateway (SWG) is the most effective solution for managing and ensuring safe internet usage in an enterprise.
+
 
 
 19. Application Security
@@ -937,7 +976,7 @@ Every resource has a sensitivity label matching a clearance level assigned to a 
 RuBAC = allows for defining granular rules that consider user roles, time constraints, and network access restrictions
 
 Discretionary Access Control (DAC): access control model based on user identity.
-RBAC (Role-Based Access Control) = user permissions are based on their specific roles and responsibilities within an organization.
+RBAC (Role-Based Access Control) = user permissions are based on their specific roles and responsibilities within an organization. (predefined rules)
 
 ABAC (attribute-based access control) = access control decisions are made based on a variety of attributes (such as user roles, time, location, network access, and more)  This is the most human readable!!
 Properties of ABAC
@@ -945,6 +984,9 @@ Subject (i.e., user or process requesting access)
 Type of action (for example "read", "write", "execute")
 Resource type (medical record, bank account etc.)
 Environment (contextual data, such as time of day or geolocation)
+
+Metadata embedded within files can reveal crucial details like file creation and modification dates, authorship, file size, and format.
+
 
 time-of-day restrictions would be the most suitable for scheduling system maintenance task during periods of low user activity
 
@@ -1014,6 +1056,7 @@ process of identifying, collecting, and producing electronically stored informat
 
 Risk = the likelihood or probability that a threat could exploit a vulnerability in a system, potentially leading to negative consequences for an organization
 Threat example: receiving a phishing email claiming to be from a vendor
+risk is generally calculated by multiplying the severity of the impact of a potential breach or exploit by the likelihood of that exploit occurring
 
 risk assessment = process of determining potential risks that could affect an organization's ability to achieve its objectives
 risk analysis = The process of evaluating discovered risks to understand their potential impact and likelihood 
@@ -1124,6 +1167,23 @@ how does blockchain technology ensure the integrity and security of transactions
 Blockchain is best defined as a distributed and decentralized public ledger technology
 
 
+
+
+
+29. Linux
+
+netstat -an = command is used to display all active connections and listening ports on a server
+ping 10.10.10.1: Ping is used to test the reachability of a host on an IP network and does not provide information about active connections or listening ports.
+nmap -sV 10.10.10.1: While Nmap is used for network scanning and security auditing, the ‘-sV‘ option is specifically for service version detection and not for reviewing all active connections.
+tracert 10.10.10.1: Traceroute is used to trace the path packets take to a network host, but it does not show active connections or listening ports.
+
+/etc/shadow file in Linux systems contains the encrypted passwords for user accounts, along with other information related to account expiration and password aging
+/etc/passwd is readable by all users and contains user account information without encrypted passwords.
+
+
+SELinux uses the Mandatory Access Control (MAC) scheme which is more rigid compared to DAC (used in windows)
+Uses labels and contexts to control access based on predefined rules
+prevents unauthorized access even if you are root
 
 
 
