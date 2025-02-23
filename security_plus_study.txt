@@ -18,7 +18,7 @@ Author: Sean Krajewski
 12. Malware Attacks
 13. Network Attacks
 14. Application Attacks
-15. Indicators iure of Malicious Activity
+15. Indicators of Malicious Activity
 16. Data Protection Concepts
 17. Resilience & Recovery
 18. Wireless Security Settings
@@ -211,6 +211,8 @@ Hash = math algo that converts input data of any size into a fixed-size hash val
 same input always makes the same hash value, fixed length, hash value changes even with small changes, collision resistance
 widely used in data integrity checks, signatures, password Hashing, blockchain, crptography
 purpose is generate a unique fixed-size output from any input data for integrity verification
+
+MD5 (Message-Digest Algorithm 5) and SHA-256 (Secure Hash Algorithm 256-bit) are both cryptographic hash functions.
 
 Message Digest Algorithm (MD5) = deprecated due to collision vulnerabilies
 Secure Hash Algorithm (SHA) = several versions like SHA-256, digital signatures, password storage, secure commnications, data integrity. SHA-3 very stronger
@@ -466,6 +468,7 @@ Example:
 CSRF (cross-site request forgery) = attacker tricks the user‘s browser into submitting a request to a different 
 website where the user is authenticated, leading to unauthorized actions.
 
+Keyloggers are hardware or software tools used to record keystrokes made on a computer keyboard
 
 
 End of Life (EOL) when a product will likely not receive security patches and other updates
@@ -478,6 +481,16 @@ jailbreaking: removing software restrictions imposed by apple on it's iOS operat
 rooting: gaining admin(root) access to the OS and system apps on android devicies
 
 zero-day attack: type of attack aimed at exploiting vulnerability that is present in already released software
+
+Firewall vulnerabilies:
+example:
+
+1. permit IP any any eq 80 (HTTP)
+2. permit IP any any eq 443 (HTTPS)
+3. permit IP any any (All Traffic)
+4. deny IP any any (Deny all other traffic)
+
+so in this example #3 would negate the others because it lets any ip to access all ports.
 
 
 
@@ -541,10 +554,24 @@ This exploit takes advantage of known vulnerabilities in these outdated protocol
 
 on-path attack is also known as a MITM attack, attackers are on the comms route between two devices, attackers intercept/modify comms
 network replay attack = attacker captures sensitive data, resends to reciver trying to gain unauthorized access/tricking the reciver.
+replay attack. In this type of attack, the attacker captures valid data, such as encrypted authentication credentials, and reuses them at a later time to impersonate a user and gain unauthorized access.
 
 Session ID has unique identifier, data can be sotred in cookie or embedded as URL parameter, typically stored in client browser
 Session replay attack is when the session id is taken and reused to impersonate a user.
 Pass the hash = attacker uses hash of the user's password instead of the cleartext.  Some systems accept hash passwords.
+
+Session Hijacking = different IP addresses are using the same session token to access the server
+example: 
+1. Request from IP: 203.0.113.5 – URL: http://yourcompanywebsite.com/dashboard?sessionToken=xyz123
+2. Request from IP: 198.51.100.8 – URL: http://yourcompanywebsite.com/dashboard?sessionToken=xyz123
+3. Request from IP: 192.0.2.12 – URL: http://yourcompanywebsite.com/dashboard?sessionToken=xyz123
+
+
+RFID cloning refers to the unauthorized duplication of security badge information, enabling access to restricted areas without detection.
+social engineering: Typically involves psychological manipulation to gain confidential information, not the physical duplication of access credentials
+
+offline brute-force attacks on the SAM and /etc/shadow files to crack passwords without network detection, by repeatedly trying different combinations.
+Windows Security Account Manager (SAM)
 
 
 
@@ -606,6 +633,8 @@ Blocked Content is an indicator where a firewall or security measure prevents at
 
 Impossible travel is a situation wherein an account is accessed from a location that is physically impossible for the user to be in
 Out of cycle logging = logs are make outside of there regular intervals/with abnormal values which might signal malicious activity
+
+SIEM (Security Information and Event Management) = aggregates and analyzes log data from different security devices, providing insights and correlations necessary for effective security management
 
 
 Brute force attack example:
@@ -714,6 +743,8 @@ cold site provides only the physical space, such as power, cooling, and networki
 
 Continuity of Operations plan
 Tabletop exercise = hypothetical conducted in a controlled environment
+walk-through is a method where team members discuss and review each step of an emergency response plan in a meeting setting, focusing on verbal discussion without physical enactment or simulation.
+
 Fail over = switching to redudant system when the original has failed.
 Simulation = semi real incident used to assess dectection response.
 Parallel processing = provides redundancy + fault tolerance by dividing tasks into smaller subtasks and distributing across multiple systems to be executed simultaneously
@@ -895,7 +926,7 @@ Zero-trust security
     data plane = responsible for enforcing these security policies (handles actual authentication + access control decisions)
 components of Policy decision point (PDP): policy engine (PE) and Policy Administrator (PA)
 policy enforcement point (PEP) enforces the control plane by the policy decision point (PDP)
-
+** Always verify and never trust, regardless of location within or outside the network.**
 
 Mandatory Access Control (MAC):
 Users are not allowed to change access policies at their own discretion
@@ -920,6 +951,12 @@ time-of-day restrictions would be the most suitable for scheduling system mainte
 principle of least privilege is a security rule that prevents users from accessing information and resources that lie beyond the scope of their responsibilities.
 
 Non-repudiation = ensures that an entity cannot deny the authenticity of a transaction or communication. e.g. digital signatures, hashing, digital certs.
+
+COPE (Corporate-Owned, Personally-Enabled) policy example:
+the company provides mobile devices to employees, retaining ownership and control over the devices, while allowing employees to use them for limited personal purposes.
+
+
+
 
 
 
@@ -1016,7 +1053,7 @@ example:  identifying a software flaw, a company immediately works on a fix
 
 
 Recovery time objective (RTO) = maximum allowable time to restore critical business functions after a disruption
-Recovery point objective = maximum acceptable amount of data loss measured by a specific point in time before a disaster or outage
+Recovery point objective (RPO) = maximum acceptable amount of data loss measured by a specific point in time before a disaster or outage
 MTTR (Mean Time to Repair) = is used to describe the average time required to repair a failed component or device
 high MTBF (Mean Time Between Failures) value indicates that a component or system provides high reliability and is less likely to fail
 MTTF (mean time to failure) = metric that represents the average amount of time a device or system is expected to operate before experiencing its first failure 
@@ -1030,6 +1067,9 @@ SASE architecture encompasses key functions like SD-WAN, Firewall-as-a-Service (
 Containerization is the most suitable technology for isolating critical applications within a shared physical server environment.
 
 OWASP (Open Web Application Security Project) = most beneficial resource for software developers looking to improve secure coding practices in web applications
+
+EOSL (End of Service Life) is the term used to describe the final stage in a product‘s lifecycle, particularly in the context of software and hardware. 
+TCO (Total Cost of Ownership) = total cost of owning a product or system over its entire lifecycle, including acquisition, operation, and maintenance costs.
 
 
 
@@ -1081,7 +1121,7 @@ Active reconnaissance = passive reconnaissance relies on gathering information o
 28. Blockchain
 
 how does blockchain technology ensure the integrity and security of transactions: By storing each transaction in an immutable chain of blocks, where each block is linked to the previous one through a unique hash
-
+Blockchain is best defined as a distributed and decentralized public ledger technology
 
 
 
