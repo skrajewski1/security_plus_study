@@ -84,7 +84,7 @@ example: encryption, warning signs, anti virus software (AV)
 
 
 deterrent security controls
-examples: warning lights, lighting, video surveillance
+examples: warning lights/signs, lighting, video surveillance
 
 
 detective security controls
@@ -152,10 +152,12 @@ Symmetric ciphers: AES, DES, IDEA, RC4
 KEK is just a second layer of crytographic keys that are used in key management systems.
 
 Internet Key Exchange (IKE) = used to exchange cryptographic keys in IPsec VPNs
-Diffie-Hellman Ephemeral (DHE) = key exchange protocol that generates temporary keys for each session provinding forward secrecy to protect past and future communications
+Diffie-Hellman Ephemeral (DHE) = key exchange protocol that generates temporary keys for each session providing forward secrecy to protect past and future communications
 Perfect Forward Secrecy (PFS) = if one key is compromised the other session keys are not.
 ECDHE = a key exchange protrocol that leverages ECC for enhanced security and efficiency
-RSA = public key cryptosystem that uses math properties of large prime numbers to secure data  (used with SSH a lot)
+
+RSA = public key cryptosystem that uses math properties of large prime numbers to secure data  (used with SSH a lot)  it's for key exchange and digital signatures
+
 Elliptic Curve Cryptography (ECC) = ideal for low-powered devices i.e. embedded systems, IoT, mobile for cryptographic solutions
 Advanced Encryption Standard (AES) = most secure/efficient encryption algorithm in use today.  (DES, RC4, 3DES are all weak encryption algos)
 International Data Encryption Algorithm (IDEA) = symmetric block cipher encryption algorithm.  replaced by modern AES 
@@ -213,10 +215,19 @@ Certificate Revocation list (CRL) list of revoked certs issed by CA of the PKI m
 Online Certificate Status Protocol (OCSP) = protocol that checks if the revocation status of a cert, better/faster than relying on a published CRL.  This is the fastest!!
 Self signed dig. certs. are not trusted by default by web browsers/applications, typically used in trusted environments i.e. internal networks, not backed by trusted/well-known third party
 Self  signed certs are free and have no identity validaton.  third party certs cost and require identity validation
+
 Certificate Signing Request (CSR) = file that contains information to send to the cert authority (CA).  CSR contains info about entity, public key, identifying details which CA uses to issue the digital cert
+
+
 Wildcard certificate is used to secure multiple subdomains under a primary domain.
+Wildcard TLS Certificate is the best choice for Marcus‘s requirement to secure multiple subdomains under his main website with a single certificate. This type of certificate allows for the encryption of the main domain and an unlimited number of its subdomains. 
+For instance, a wildcard certificate for *.mysite.com will effectively secure blog.mysite.com, store.mysite.com, and any other subdomains of mysite.com.
+
+
 Subject Alternative Name (SAN) cert = lets you secure multiple domain names or subdomains with a single cert
 Object Identifier (OID) = used to uniquely identify PKI objects
+
+
 
 public-private key pair is a pair of keys where one is used for encryption and the other is used for decryption
 public key = encryption
@@ -528,6 +539,9 @@ Data masking:
 
 tokenization = sensitive data is stored in a separate location but can be retrieved with non-sensitive replacement
 and can be processed just like original data without revealing the contents.
+
+Key Stretching is a technique used to enhance the security of stored passwords. It involves applying a cryptographic hash function to the password and then repeating the process multiple times. 
+This increases the computational time and effort required to crack the password through brute-force attacks, making simple or short passwords more resistant to such attacks.
 
 Obfuscation = modifies data to make it difficult to understand/reverse engineer (not always with encryption/hiding)
 
@@ -856,6 +870,9 @@ Recovery point objective = maximum acceptable amount of data loss measured by a 
 MTTR (Mean Time to Repair) = is used to describe the average time required to repair a failed component or device
 high MTBF (Mean Time Between Failures) value indicates that a component or system provides high reliability and is less likely to fail
 MTTF (mean time to failure) = metric that represents the average amount of time a device or system is expected to operate before experiencing its first failure 
+
+
+Backout plan = A backout plan is essential for safely reversing changes that do not work as expected, ensuring minimal impact on system operations.
 
 
 
