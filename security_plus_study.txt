@@ -107,6 +107,8 @@ CIA triad = confidentiality, integrity, availability   (CIA is basic to informat
 
 
 AAA = Authentication, authorization, accounting   (e.g. TACACS+ and RADIUS)
+Remote Authentication Dial-In User Service (RADIUS) is widely used for providing centralized AAA (especially in wireless netowrks/remote server access)
+
 authentication methods for people = usernames/passwords, biometrics, MFA
 authentication methods for devices = digital certificates, MFA, MAC addresses
 
@@ -120,8 +122,10 @@ Honeyfile contains decoy data i.e. it's fake
 Honeyfile is designed to attrack attackers, trigger alerts when accessed, monitor network activity
 Honeytoken = designed to track attackers
 
-
-
+Reverse Proxy: While it can distribute traffic, its primary role is not load balancing but rather routing client requests to the appropriate server.
+VPN Gateway: This is used for secure remote access and does not address the specific requirement of load balancing.
+Firewall: A firewall‘s main function is to provide security by monitoring and controlling incoming and outgoing network traffic, not load balancing.
+load balancer is the ideal solution for managing high traffic and evenly distributing network load across multiple servers
 
 4. Encryption
 
@@ -150,6 +154,12 @@ Asymmetric ciphers: DHE, ECC, RSA
 Symmetric ciphers: AES, DES, IDEA, RC4
 
 KEK is just a second layer of crytographic keys that are used in key management systems.
+
+Internet Protocol Security (IPSec) is a suite of protocols used to secure Internet Protocol (IP) communications by encrypting and authenticating each IP packet in a session.
+
+
+Cloud Access Security Broker (CASB) is specifically designed to monitor and control access to cloud applications
+
 
 Internet Key Exchange (IKE) = used to exchange cryptographic keys in IPsec VPNs
 Diffie-Hellman Ephemeral (DHE) = key exchange protocol that generates temporary keys for each session providing forward secrecy to protect past and future communications
@@ -353,6 +363,8 @@ Bluebugging: gaining remote control over bluetooth device to eavesdropping
 open service ports are usually the most probable cause of unauthorized access to be exploited on a network entry points
 many devices come from the factory with default credentials i.e. username/password that should be changed because they can be looked up online relatively easily.
 
+reducing attack surface = limiting number of active ports/protocols
+
 Common threat vectors for managed service providers (MSPs), vendors, and suppliers are propagation of malware and social engineering techniques (i.e. targeting employees with sensitive data)
 
 unsupported systems/apps that don't receive regular updates/patches are often volnerable to exploits
@@ -474,6 +486,12 @@ DNS amplication attack is like amplifed/reflected DDoS attacks execpt it just ex
 DNS spoofing - also called DNS cache poisoning. provide false DNS info to a DNS resolvers
 
 DNS cache poisioning Remapping a domain name to a rogue IP address
+example:
+ww A 10.20.30.40
+mail A 10.10.10.10
+ftp A 10.10.10.11
+The IP address for the ‘www‘ record does not match the company‘s legitimate web server IP address.
+
 
 domain hijacking - losing control over the domain names due to unlawful applications
 Bluesnarfing - gaining unauthorized access to a bluetooth device
@@ -499,7 +517,15 @@ Pass the hash = attacker uses hash of the user's password instead of the clearte
 14. Application Attacks
 
 code injection is how XSS attacks happen i.e inject malicious script to the user.
+
+
+
 LDAP injection exploits a protocol used for managing and accessing networked resources
+LDAP is a centralized directory service used for storing and managing user accounts, authentication, and authorization information in large organizations. 
+It allows multiple applications and services to query and authenticate users against a single directory (e.g., Active Directory, OpenLDAP).
+
+
+
 XML injection targets web apps that generat contnet used to store and transport data
 Buffer overflow exploits occurs when an attacker overwirtes contents of memory to cuase unpredictable results in an app.
 Replay attack intercepts and retransmits valid data exchange between an application and server or another application.
@@ -690,6 +716,12 @@ PEAP (Protected Extensible authentication protocol) = open standard wireless net
 if you were going to upgrade you would do it with PEAP
 
 
+OAuth (Open Authorization) is a widely used authentication framework that allows users to log in to third-party applications 
+using their existing social media or other service provider accounts without sharing their passwords
+
+SAML is a widely used Single Sign-On (SSO) protocol designed for enterprise environments.
+allows employees to log in once and gain access to multiple cloud-based and internal applications without needing to re-authenticate for each service.
+
 
 19. Application Security
 
@@ -700,7 +732,10 @@ error and exception handling
 Input validation helps protect against SQL injection, command injection, and cross-site scripting (XSS)
 secure cookie  = type of http cookie that is enrypted over HTTPS that prevents it from being intercepted/tampered during transit
 static code analysis = manual review of code to dectect logic/syntax errors.   you are not running the code to see errors (i.e. it's static)
+
 dynamic code analysis = requires actual execution of the code to identify flaws
+key practice in software security testing, where the analyst runs the application in a live environment to identify potential vulnerabilities and operational defects
+
 Input validation is a crucial security measure for web applications!!
 
 code signing purpose:
@@ -754,12 +789,21 @@ Exploidts vulnerabilities
 
 
 Responsible disclosure program encourages: security research, ethical hackers, report vulnerabilies, and bug bounty program ($$ for finding valid vulnerabilies)
+
 False positive error = antivirus software identifyig non-malicious file as a virus due to faulty virus signature
-False negative = situation where an attack occure but no alarm or alert is raised i.e. undectected attack.
+ a false positive occurs when legitimate traffic is incorrectly identified as an attack or malicious activity
+
+
+False negative = situation where an attack occured but no alarm or alert is raised i.e. undectected attack.
+
 FRR (false rejection rate) = measures the likelihood that a security system will incorrectly reject an acess attpempt by an authroised user
 ATT&CK (Adversarial Tactics, Techniques, and Common Knowledge) =  framework that provides a detailed understanding of the tactics, techniques, and procedures (TTPs) used by adversaries during cyberattacks.
 CVSS (Common Vulnerability Scoring System) = ndustry standard used for assessing and scoring the severity of computer system security vulnerabilities, providing a way to evaluate their impact based on factors like exploitability and potential damage.
 CVE (Common Vulnerabilities and Exposures) =  refers to a system that identifies, defines, and catalogs publicly known cybersecurity vulnerabilities.
+
+
+fail-closed system is one that, in the event of a failure, restricts access rather than allowing unrestricted entry
+ This approach prioritizes security over accessibility, ensuring that no unauthorized access occurs during system errors.
 
 
 EF (exposure factor) = degree of loss that a realized threat would have on a specific assets
@@ -886,11 +930,16 @@ One-time risk assesstment = has a specific purpose i.e. for a new product lauch
 Real-time monitoring of network security threats is an example of continous risk assessment
 
 
+Common vulnerability scoring system (CVSS) = numerical score to assess the severity of known vulnerabilities
+
+
 Qualitative risk assessment = is based on subjective judgment and focuses on the likelihood and impact of risks, 
 often using descriptive terms like "high," "medium," and "low" rather than numerical values.
 
 Single loss expectancy (SLE) = involves numerical values to estimate the potential financial impact of a risk.  Example of quatitative risk assessement
 ALE (Annual Loss Expectancy) = estimated yearly financial loss due to a specific risk, calculated by multiplying the Single Loss Expectancy (SLE) by the Annual Rate of Occurrence (ARO).
+
+Annual Rate of Occurrence (ARO) = It quantifies the likelihood of an event happening in a year.
 
 
 SLE=Asset Value (AV)×Exposure Factor (EF)
