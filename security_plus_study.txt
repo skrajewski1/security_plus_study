@@ -46,6 +46,7 @@ Use these notes as you please.  Hope they help and thank you for reading!
 
 2. Resources
 
+https://skillcertpro.tech/  (cost $20.00 for 15 mock exams, total 900 questions, and 1 cheat sheet)
 https://www.examcompass.com/   (tests, quizes to use)
 Professer Messer      (lot of free content on YouTube)
 (Exam details) https://www.comptia.org/certifications/security#examdetails  
@@ -53,7 +54,6 @@ Professer Messer      (lot of free content on YouTube)
 
 For PBQs
 Practice with labs (e.g., TryHackMe, CyberSecLabs, or CompTIA Labs) to build hands-on skills
-
 
 
 
@@ -111,6 +111,16 @@ authentication methods for people = usernames/passwords, biometrics, MFA
 authentication methods for devices = digital certificates, MFA, MAC addresses
 
 
+Policy Enforcement Point (PEP) = Data Plane component that enforces the security policies defined at the Control Plane by the Policy Decision Point (PDP)
+
+Honeypots mimic real systems to attract cyber attackers, they contain apparent vulnerabilities that are closely monitored by a security team
+Honeynet = network of honeypots
+Honeypots can be fake websites, databases, files, or servers
+Honeyfile contains decoy data i.e. it's fake
+Honeyfile is designed to attrack attackers, trigger alerts when accessed, monitor network activity
+Honeytoken = designed to track attackers
+
+
 
 
 4. Encryption
@@ -118,8 +128,11 @@ authentication methods for devices = digital certificates, MFA, MAC addresses
 Self-encrypting drive (SED) = Data storage device with hardware-level encryption e.g. 
 Full disk encryption (FDE)  = software tech providing confidentiality to storage devices
 Encrypting File System (EFS) = MS windows component that enables encryption of individual firewalls
+
+
 GNU privacy guard (GPG) = used to encrypt/sign data often for secure email + file encryption
 Pretty Good Privacy (PGP) = used for encrypting emails, files, and other forms of communication
+
 HTTPS = secures web traffic via SSL/TLS encryption
 Secure file transfer protocol (SFTP) = enables secure file transfer over ssh  (SFTP is not an extension of FTP!!)
 Secure Shell (SSH) = type of cryptographic network protocol for secure data communication and remote CLI login
@@ -160,6 +173,8 @@ Galois/Counter mode (GCM) = adds authentication + CTM and is widely used in cryp
 The longer the key size/key length in cryptographic algorithms the stronger the key b/c the max number of combinations increases.
 AES has 3 key lengths 128, 192, 256.  
 
+SHTTP = secure hypertext transfer protocol, it's obsolete for data transfer over the web.
+
 
 
 5. Hashing
@@ -189,6 +204,8 @@ ECDSA is used for digital signatures and does not include a native encrytpion fu
 
 7. Digital Certificates
 
+PKI = hierarchical system for the creation, management, storage, distribution, and revocation of digital certificates
+
 Digital certificates = digital document that verifies an individual, device, service, organization in online commications
 Registration Authority (RA) role in Public Key Infrastructure (PKI) is accpeting requests for digital certs & authenticating the entity making the request
 Certificate Authority (CA)  acts as a third-party of digital certs
@@ -201,6 +218,8 @@ Wildcard certificate is used to secure multiple subdomains under a primary domai
 Subject Alternative Name (SAN) cert = lets you secure multiple domain names or subdomains with a single cert
 Object Identifier (OID) = used to uniquely identify PKI objects
 
+public-private key pair is a pair of keys where one is used for encryption and the other is used for decryption
+public key = encryption
 
 
 8. Threat Actor Types
@@ -522,6 +541,12 @@ segmentation for securing data advantages
 access control mechanisms: ACL, FACL, DAC, MAC, RBAC
 
 
+SED (self encrypting drive) = data storage device equipped with hardware-level encryption functionality
+FDE (full disk encryption) = provides confidentiality for an entire data storage device, encrypting the entire disk to protect the data at rest from unauthorized access
+EFS (encrypting file system) = MS windows component that enables encrytpition of individual files
+
+
+
 
 
 17. Resilience & Recovery
@@ -578,6 +603,10 @@ replication = create real-time backups on another system
 journaling = allows you to recover chagnes made since last backup
 Power distribution unit (PDU) = is a device to supply and monitor the quality of electric power to multiple outlets  (used in data centers)
 Uninterruptible power supply (UPS) = provides short-term emergency power during an unexpected main power outtage.  devices can continue operating for a limited time so that they can have a normal shutdown
+
+
+BIA (Business Impact Analysis) = assesses potential impact of incidents on critical functions/operations
+
 
 
 18. Wireless Security Settings
@@ -705,6 +734,14 @@ SRTP (secure real-time transport protocol) = SRTP is used to provide encryption,
 
 
 22. Access Controls
+
+
+Zero-trust security
+    control plane is responsible for defining and managing the security policies
+    data plane = responsible for enforcing these security policies (handles actual authentication + access control decisions)
+components of Policy decision point (PDP): policy engine (PE) and Policy Administrator (PA)
+policy enforcement point (PEP) enforces the control plane by the policy decision point (PDP)
+
 
 Mandatory Access Control (MAC):
 Users are not allowed to change access policies at their own discretion
