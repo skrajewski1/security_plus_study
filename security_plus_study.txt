@@ -80,7 +80,7 @@ example: lighting, vestibules, fencing/barricades, security guards
 
 
 preventive security controls: 
-example: encryption, warning signs, anti virus software (AV)
+example: encryption, sandboxing, anti virus software (AV)
 
 
 deterrent security controls
@@ -189,7 +189,9 @@ widely used in data integrity checks, signatures, password Hashing, blockchain, 
 Message Digest Algorithm (MD5) = deprecated due to collision vulnerabilies
 Secure Hash Algorithm (SHA) = several versions like SHA-256, digital signatures, password storage, secure commnications, data integrity. SHA-3 very stronger
 
- HMAC (Hash-based Message Authentication Code) = it's SHA-256 + a secret key
+HMAC (Hash-based Message Authentication Code) = it's SHA-256 + a secret key
+Involves a cryptographic hash function in combination with a secret cryptographic key.
+
 Cyclic Redundancy Check (CRC) =  non-cryptographic hash function often used for error-checking purposes
 
 
@@ -210,7 +212,13 @@ PKI = hierarchical system for the creation, management, storage, distribution, a
 
 Digital certificates = digital document that verifies an individual, device, service, organization in online commications
 Registration Authority (RA) role in Public Key Infrastructure (PKI) is accpeting requests for digital certs & authenticating the entity making the request
+
+
 Certificate Authority (CA)  acts as a third-party of digital certs
+primarily is responsible for issuing digital certs and verify identity of entities
+
+
+
 Certificate Revocation list (CRL) list of revoked certs issed by CA of the PKI make sure revoked certs aren't trusted
 Online Certificate Status Protocol (OCSP) = protocol that checks if the revocation status of a cert, better/faster than relying on a published CRL.  This is the fastest!!
 Self signed dig. certs. are not trusted by default by web browsers/applications, typically used in trusted environments i.e. internal networks, not backed by trusted/well-known third party
@@ -249,7 +257,7 @@ motivations: Espionage, political/philosophical beliefs, disruption/chaos, war
 organized crime
 funding: med-high
 sophistication:med-high
-motivations: Financial gain, data exfiltration, extortion
+motivations: Financial gain, data exfiltration, extortion  (they would most likely strike for financial gain using ransomware or data theft)
 
 
 unskilled attacker
@@ -355,6 +363,8 @@ WEP (wired equivalent privacy)
 WPA2WPA2
 
 
+Example of typosquatting :  ‘onlinestorez.com‘ (attacker) instead of ‘onlinestore.com (legit)
+
 
 
 10. Social Engineering
@@ -366,6 +376,7 @@ smihing = is using sms or text messages to get sensitive data
 misinformation = false or misleading info spread UNintentionally
 Disinformation = intentially spreading false info
 
+Whaling: type of phishing attack that targets high-level executives (like a CEO) or other high-profile targets
 
 pretexting is social engineering that relies on identity fraud i.e. attacker impersonates someone with a legitimate need for the information, relying on identity fraud as a method of deception
 pretexting invovles creating a fabricated scenario i.e. pretext
@@ -374,6 +385,7 @@ BEC (business email compromise) = type of phishing that relies on impersonating 
 
 websites are susceptible to watering hole Attacks e.g. attacker makes a fake website similar to the real one and steals the personal info when users login. That's brand impersonation
 
+Bloatware = unwanted software that gets installed alongside another program
 
 
 
@@ -403,11 +415,22 @@ Common type of OS-based vulnerability are:
 SQLi (SQL Injection) is a security vulnerability that allows an attacker to insert malicious code (typically SQL statements) into input fields, such as search bars or login forms, to manipulate or execute unauthorized commands on a database.
 example: SELECT * FROM users WHERE userName = 'Alice' AND password = '' OR '1' = '1';
 Here, the condition '1' = '1' is always true, effectively bypassing authentication by making the WHERE clause evaluate to true regardless of the username or password, allowing unauthorized access to all user records.
+Another example:
+192.168.4.27 10.10.20.5 /store/item?id=105‘ OR ‘1‘=‘1
+192.168.4.27 10.10.20.5 /store/item?id=1 DROP TABLE users
+
+
 
 Example of XSS (cross-site scripting) attack
 Exploits the trust a user's web browser has in a website
 A malicious script is injected into a trusted website
 User's browser executes attacker's script
+Example of XSS is an attacker injects a malicious script into a comment on a blog, which is then executed by other users‘ browsers, leading to data theft.
+
+
+CSRF (cross-site request forgery) = attacker tricks the user‘s browser into submitting a request to a different 
+website where the user is authenticated, leading to unauthorized actions.
+
 
 
 End of Life (EOL) when a product will likely not receive security patches and other updates
@@ -459,6 +482,9 @@ wireless disassociation attack e.g. deauthentication, DoS attack
 wireless jamming attack would be a DoS attack
 IV (Initialization vector) attack focuses on exploiting vulnerabilies in WEP
 
+Downgrade attack = the perpetrator forces a system to downgrade its communication protocol to older, less secure versions. 
+This exploit takes advantage of known vulnerabilities in these outdated protocols.
+
 
 on-path attack is also known as a MITM attack, attackers are on the comms route between two devices, attackers intercept/modify comms
 network replay attack = attacker captures sensitive data, resends to reciver trying to gain unauthorized access/tricking the reciver.
@@ -499,6 +525,9 @@ for example:
  http://www.example.com/var/www/files/../../../etc/passwd
  http://www.example.com/var/www/files/images/../../../../etc/passwd
 
+Another example of directory traversal
+http://companywebsite.com/app.php?file=../../config%00.txt.
+The ‘%00‘ (null byte) is likely an attempt to terminate the string prematurely to manipulate the server‘s processing
 
 
 
@@ -512,6 +541,17 @@ Blocked Content is an indicator where a firewall or security measure prevents at
 
 Impossible travel is a situation wherein an account is accessed from a location that is physically impossible for the user to be in
 Out of cycle logging = logs are make outside of there regular intervals/with abnormal values which might signal malicious activity
+
+
+Brute force attack example:
+URL: http://companywebsite.com/login?username=admin&password=password1
+URL: http://companywebsite.com/login?username=admin&password=password2
+URL: http://companywebsite.com/login?username=admin&password=password3
+URL: http://companywebsite.com/login?username=admin&password=password4
+URL: http://companywebsite.com/login?username=admin&password=password5
+
+
+supply chain attack occurs when a trusted vendor‘s compromised system or software is used as a means to infiltrate an organization‘s network e.g. accounting software is hacked
 
 
 
@@ -544,6 +584,7 @@ Key Stretching is a technique used to enhance the security of stored passwords. 
 This increases the computational time and effort required to crack the password through brute-force attacks, making simple or short passwords more resistant to such attacks.
 
 Obfuscation = modifies data to make it difficult to understand/reverse engineer (not always with encryption/hiding)
+for example: tokenization where sensitive data is replaced with unique identification symbols (tokens) that retain all the essential information about the data without compromising its security.
 
 
 segmentation for securing data advantages
@@ -646,7 +687,7 @@ Encrypts only the password in the access-request packet
 
 LEAP (lightweight extensible authentication protocol) = now deprecated, wireless auth protocol by Cisco  (EAP TTLS or EAP-TLS are recommended)
 PEAP (Protected Extensible authentication protocol) = open standard wireless network auth that encapsulates auth process in encrypted TLS tunnel
-
+if you were going to upgrade you would do it with PEAP
 
 
 
@@ -660,6 +701,7 @@ Input validation helps protect against SQL injection, command injection, and cro
 secure cookie  = type of http cookie that is enrypted over HTTPS that prevents it from being intercepted/tampered during transit
 static code analysis = manual review of code to dectect logic/syntax errors.   you are not running the code to see errors (i.e. it's static)
 dynamic code analysis = requires actual execution of the code to identify flaws
+Input validation is a crucial security measure for web applications!!
 
 code signing purpose:
 confirm apps source of origin  
@@ -740,6 +782,8 @@ Delaying or forgoing a patch for a specific system, e.g., when applying a patch 
 HTTPS = secure webrowsing
 Secure file transfer are = FTPS (FTP secure) and SFTP (ssh FTP)
 FTPS = runs on TCP port 990 (implicit)  or TCP port 21 (explicit).  Uses SSL/TLS to secure the connection.  SFTP uses ssh protocol
+FTP on port 21 is typically not secure.
+
 SMTPS is deprecated, used for emails, now we use SMTP with STARTTLS
 IMAPS and POP3S = allow for secure retrieval of emails from a mail server to an email client by encrypting the communication using SSL/TLS
 SRTP (secure real-time transport protocol) = SRTP is used to provide encryption, authentication and integrity for real time multimedia communciation like video/audio calls over ip networks
