@@ -74,7 +74,7 @@ aka focus on day-to-day, ensure equipment contines to work as specified, impleme
 examples: config management, system backups, patch management
 
 
-Physcial security controls 
+Physical security controls 
 are designed to deter, detect, and prevent unauthorized access, theft, damage, or destruction of material assets.
 example: lighting, vestibules, fencing/barricades, security guards
 
@@ -101,6 +101,14 @@ examples: backup power systems, Multi-factor authentication (MFA), network segme
 
 directive security controls are implemented through documentation i.e. policies, procedures, guidelines
 examples: incident response plan (IRP), acceptable use policy (AUP)
+
+
+CIA triad = confidentiality, integrity, availability   (CIA is basic to information security)
+
+
+AAA = Authentication, authorization, accounting   (e.g. TACACS+ and RADIUS)
+authentication methods for people = usernames/passwords, biometrics, MFA
+authentication methods for devices = digital certificates, MFA, MAC addresses
 
 
 
@@ -719,6 +727,8 @@ Environment (contextual data, such as time of day or geolocation)
 time-of-day restrictions would be the most suitable for scheduling system maintenance task during periods of low user activity
 
 principle of least privilege is a security rule that prevents users from accessing information and resources that lie beyond the scope of their responsibilities.
+
+Non-repudiation = ensures that an entity cannot deny the authenticity of a transaction or communication. e.g. digital signatures, hashing, digital certs.
 
 
 
