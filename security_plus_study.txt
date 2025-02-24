@@ -39,9 +39,9 @@ Author: Sean Krajewski
 1. Note to Reader 
 
 Below are my notes I took while studying to take the Comptia Security+ Exam.
-This isn't meant to be 100% thorough and is not a study guide.  It's just a personal resource I created with the aim of reducing
+This isn't meant to be 100% thorough and is not a study guide.  It's just my personal resource I created with the aim of reducing
 time looking for things. Typically I would write out my notes by hand but I found typing is faster and the Ctrl + F search function 
-works for me.  I'm sharing this here because Github because I have some other work here and want to keep things simple.
+works for me.  I'm sharing this here because Github because I like using this repo for notes, homelabs, etc.
 In order to pass you need a score of 750 of 900 or 83%.  Most of it will be multiple choice but there are performance based questions.
 Use these notes as you please.  Hope they help and thank you for reading!
 
@@ -105,6 +105,7 @@ provide alternative security measures when primary controls are not feasible.
 
 directive security controls are implemented through documentation i.e. policies, procedures, guidelines
 examples: incident response plan (IRP), acceptable use policy (AUP)
+AUP sets the rules and guidelines for using an organization‘s network and resources.
 
 
 CIA triad = confidentiality, integrity, availability   (CIA is basic to information security)
@@ -123,11 +124,15 @@ authentication methods for people = usernames/passwords, biometrics, MFA
 authentication methods for devices = digital certificates, MFA, MAC addresses
 embedded certificate in a smart card holds the user's private key, which is crucial for secure authentication processes
 
+MFA, the ‘Knowledge‘ factor, or ‘Something You Know‘, such as passwords and PINs, is generally considered the weakestMFA 
+
 EDR (Endpoint Detection and Response) = continuously monitors and analyzes its endpoints for malicious activities and anomalies, and can respond to threats in real-time
 Intrusion Detection System (IDS): IDS monitors network traffic for suspicious activities
 Network Address Translation (NAT): NAT is used for IP address mapping 
 Network Access Control (NAC): NAC manages network access based on compliance policies
 
+
+Defense-in-Depth is a layered security approach that uses multiple security measures across various areas, providing redundancy in the event one measure fails.
 
 Policy Enforcement Point (PEP) = Data Plane component that enforces the security policies defined at the Control Plane by the Policy Decision Point (PDP)
 
@@ -142,6 +147,9 @@ Honeytoken = designed to track attackers
 Reverse Proxy: While it can distribute traffic, its primary role is not load balancing but rather routing client requests to the appropriate server.
 VPN Gateway: This is used for secure remote access and does not address the specific requirement of load balancing.
 Firewall: A firewall‘s main function is to provide security by monitoring and controlling incoming and outgoing network traffic, not load balancing.
+Next-Generation Firewalls (NGFWs) are the ideal solution for a company looking for advanced network security features.
+Stateful firewalls provide dynamic packet filtering and monitor the state of active connections
+
 load balancer is the ideal solution for managing high traffic and evenly distributing network load across multiple servers
 
 Split Tunnel and Full Tunnel configurations in VPN connections:
@@ -167,7 +175,8 @@ Proprietary information refers to data or knowledge that is unique to your organ
 Self-encrypting drive (SED) = Data storage device with hardware-level encryption e.g. 
 Full disk encryption (FDE)  = software tech providing confidentiality to storage devices
 Encrypting File System (EFS) = MS windows component that enables encryption of individual firewalls
-
+USB data blocker is designed to block unauthorized data transfer through USB ports while allowing charging
+HSM (Hardware Security Module) is a physical device that provides a secure environment for various cryptographic operations including the generation, protection, and management of cryptographic keys.
 
 GNU privacy guard (GPG) = used to encrypt/sign data often for secure email + file encryption
 Pretty Good Privacy (PGP) = used for encrypting emails, files, and other forms of communication
@@ -185,13 +194,18 @@ Transport Layer Security (TLS) = provides secure commications over a network and
 
 Techniques for encrpyting are Symmetric (secret/session key) and asymmetric (public key)
 Asymmetric encryption requires public key but the message can only be decrypted by a private-key
+for example:  encrypt (sign) his message using his private key. The recipient would then use Bob‘s public key to decrypt
+example 2: Alice encrypts the message with Bob‘s public key, and Bob decrypts it with his private key.
 Asymmetric ciphers: DHE, ECC, RSA
+
 Symmetric ciphers: AES, DES, IDEA, RC4
+Symmetric uses the same key for both encryption and decryption 
 
 KEK is just a second layer of crytographic keys that are used in key management systems.
 
 Internet Protocol Security (IPSec) is a suite of protocols used to secure Internet Protocol (IP) communications by encrypting and authenticating each IP packet in a session.
 Transport Layer Security (TLS) is the key protocol used to secure web browsing (encrypts the data transmitted between web browsers and web servers)
+For IPsec = AH offers authentication and integrity, while ESP provides confidentiality, integrity, and authentication
 
 Cloud Access Security Broker (CASB) is specifically designed to monitor and control access to cloud applications
 
@@ -208,6 +222,8 @@ Advanced Encryption Standard (AES) = most secure/efficient encryption algorithm 
 International Data Encryption Algorithm (IDEA) = symmetric block cipher encryption algorithm.  replaced by modern AES 
 Initialization Vector (IV) = is introduced in cryptography to introduce randomness into encryption.  every ciphertext will be different with the same plaintext
 Exclusive OR (XOR) = logical operation used in many cyptographic algorithms e.g. stream ciphers and encryption schemes b/c it's reversible
+PBKDF2 (Password-Based Key Derivation Function 2) is a widely recognized key stretching algorithm.
+
 
 
 Cipher block chaining (CBC) = chains the ciphertext blocks together such that each one depends on the previous block.
@@ -227,7 +243,7 @@ DMARC (Domain-based Message Authentication, Reporting, and Conformance) = define
 DKIM (DomainKeys Identified Mail) = Provides a method for the recipient to verify that the email content hasn‘t been altered during transmission  (adds digital cert to email)
 SPF (Sender Policy Framework) = Allows the domain owner to specify authorized mail servers permitted to send emails on their behalf  (no email spoofing)
 
-
+for IAM the term federation is the establishment of trust relationships between different organizations to share identity information
 
 
 5. Hashing
@@ -269,7 +285,7 @@ Registration Authority (RA) role in Public Key Infrastructure (PKI) is accpeting
 
 
 Certificate Authority (CA)  acts as a third-party of digital certs
-primarily is responsible for issuing digital certs and verify identity of entities
+primarily is responsible for issuing digital certs and verify identity of entities (i.e. create and use signing keys for issuing certificates)
 
 
 
@@ -341,8 +357,10 @@ motivations: Convenience, lack of awareness of security risks, meeting specific 
 
 
 Advanced Persistent Threat (APT) sophisticated prolonged cyberattacks carried out by usually nation-states.  usually used to maintain long-term access to sensitive systems or data
-Shadow IT is IT personnel using unapproved cloud services, apps, devices for work purposes potentially creating security risks and compliance issues.
+long-term, strategic cyber campaigns targeted at specific organizations or nations
 
+Shadow IT is IT personnel using unapproved cloud services, apps, devices for work purposes potentially creating security risks and compliance issues.
+Unauthorized systems or applications used without official approval.
 
 
 9. Threat Vectors & Attack Surfaces
@@ -563,7 +581,7 @@ The batch file, named sync.bat and located at C:\Windows\Tasks\, contains the fo
 
 Worm is a replicating type of malicious program that can spread across networks.  It basically uses up bandwidth and system resources
 spyware gathers info about activity like keystrokes, browsing habits, personal details, without the user's knowledge
-
+Rootkit type of malware that embeds itself deeply into a computer‘s operating system, providing unauthorized root or administrative access to attackers
 
 
 
@@ -584,6 +602,8 @@ mail A 10.10.10.10
 ftp A 10.10.10.11
 The IP address for the ‘www‘ record does not match the company‘s legitimate web server IP address.
 
+
+Evil Twin attack = same name as the private ‘LibraryNet‘ without verifying its authenticity
 
 domain hijacking - losing control over the domain names due to unlawful applications
 Bluesnarfing - gaining unauthorized access to a bluetooth device
@@ -680,6 +700,11 @@ Out of cycle logging = logs are make outside of there regular intervals/with abn
 
 SIEM (Security Information and Event Management) = aggregates and analyzes log data from different security devices, providing insights and correlations necessary for effective security management
 
+Unified Threat Management (UTM) System is the ideal solution for organizations seeking a comprehensive and centrally-managed approach to network security
+combine various essential security features into a single platform
+
+Just-In-Time Permissions in a PAM system allow for the temporary elevation of user privileges
+Privileged Access Management (PAM) = systems help address the issue of privilege abuse by enforcing the principle of least privilege
 
 Brute force attack example:
 URL: http://companywebsite.com/login?username=admin&password=password1
@@ -691,8 +716,8 @@ URL: http://companywebsite.com/login?username=admin&password=password5
 
 supply chain attack occurs when a trusted vendor‘s compromised system or software is used as a means to infiltrate an organization‘s network e.g. accounting software is hacked
 
-
-
+Security log in Windows Event Viewer = place to review security-related incidents, including failed login attempts
+Temporal Accounts are ideal for the financial institution‘s requirements. These accounts are created for a specific purpose and a limited duration
 
 16. Data Protection Concepts
 
@@ -751,7 +776,7 @@ Dynamic KBA: This involves questions generated in real-time based on publicly av
 Biometric Authentication: This type of authentication uses biological characteristics, such as fingerprints or facial recognition
 most critical metric is False Acceptance Rate (FAR); you want this as low as possible
 False Rejection Rate (FRR)
-Crossover Error Rate (CER)
+Crossover Error Rate (CER)  use this to assess accuracy (lower is better)
 True Acceptance Rate (TAR): TAR measures the rate of correctly authenticating authorized individuals
 
 
@@ -811,6 +836,8 @@ Simulation = semi real incident used to assess dectection response.
 Parallel processing = provides redundancy + fault tolerance by dividing tasks into smaller subtasks and distributing across multiple systems to be executed simultaneously
 snapshot = file-based representation of the state of a vitual machine  (let's you revert to this state later if you want too)
 snapshot backups = commonly used with virtual machines
+Differential Backup copies all the data that has changed since the last full backup. While it requires more storage space than an incremental backup, it simplifies the restore process as it only needs the last full backup and the last differential backup to restore the system.
+ Incremental Backup: This method only backs up data that has changed since the last backup of any type (full or incremental), using less storage space but potentially leading to a longer restore process
 replication = create real-time backups on another system
 journaling = allows you to recover chagnes made since last backup
 Power distribution unit (PDU) = is a device to supply and monitor the quality of electric power to multiple outlets  (used in data centers)
@@ -830,7 +857,11 @@ You should change default configs with devices from the manufacture (best practi
 PINs are used in bluetooth device pairings
 WPA3-SAE (Simultaneous Authentication of Equals) offers the strongest security for a small network that lacks an authentication server
 802.1X is a network access control protocol that, when used in conjunction with WPA3, provides a robust security framework for Wi-Fi networks.
+IEEE 802.1X is a network security protocol that offers a method for authenticating and controlling user access to networked systems, particularly in Ethernet networks
 
+
+host-based firewall allows for the regulation of incoming and outgoing network traffic on individual computers with specific configuration for each
+Network-based firewall: Controls traffic at the network perimeter, not on individual systems.
 
 WPA2/WPA3 Enterprise mode are:
 Suitable for large corporate networks
@@ -844,6 +875,8 @@ Network-based: This refers to intrusion detection systems that monitor network t
 Heuristic-based: Heuristic-based detection uses behavioral patterns to identify potential threats
 Anomaly-based: Anomaly-based detection identifies unusual activities or deviations from normal behavior
 
+
+screened subnet, also known as a demilitarized zone (DMZ), is the best choice for placing a web server that interacts with external users
 
 
 RADIUS are:
@@ -878,6 +911,7 @@ Input validation   (e.g. web form field accepting data from server commands)
 error and exception handling
 
 Input validation helps protect against SQL injection, command injection, and cross-site scripting (XSS)
+input validation and encoding are countermeasures to XSS
 secure cookie  = type of http cookie that is enrypted over HTTPS that prevents it from being intercepted/tampered during transit
 static code analysis = manual review of code to dectect logic/syntax errors.   you are not running the code to see errors (i.e. it's static)
 
@@ -898,7 +932,9 @@ Structured Exception Handling (SEH) = a Windows feature  for handling execptions
 Address Space Layout Randomization (ASLR) = randomizes the location of key data in areas of memory. defense against memory based attacks like buffer overflows
 CAPTCHA is used a countermeasure againts automated software like network bots.
 
-
+collision attack occurs when different data sets result in the same hash output, undermining the hash function‘s integrity.
+Replay Attack: Consists of reusing valid data transmission
+Injection Attack: Involves inserting harmful code into a system
 
 
 
@@ -1110,7 +1146,7 @@ Single loss expectancy (SLE) = involves numerical values to estimate the potenti
 ALE (Annual Loss Expectancy) = estimated yearly financial loss due to a specific risk, calculated by multiplying the Single Loss Expectancy (SLE) by the Annual Rate of Occurrence (ARO).
 
 Annual Rate of Occurrence (ARO) = It quantifies the likelihood of an event happening in a year.
-
+Mean Time Between Failures (MTBF): MTBF is a measure of the reliability of a system or component and is not directly applicable to forecasting the frequency of cybersecurity incidents.
 
 SLE=Asset Value (AV)×Exposure Factor (EF)
 
@@ -1173,7 +1209,7 @@ BPA (Business Partnership Agreement) is a formal contract between business partn
 including details about the management, operation, and decision-making processes within the business.
 
 
-
+MSSP (Managed Security Service Provider) specifically denotes a company that focuses on providing services related to the management and monitoring of security aspects in IT and network systems. 
 
 27. Penetration Testing
 
@@ -1224,8 +1260,10 @@ prevents unauthorized access even if you are root
  nmap -sV example.com  = designed to perform service version detection, allowing the company to identify what versions of software are running on its web application‘s server
 
 
+Syslog is a standard logging facility on Linux that captures log messages from various sources and stores them, providing a centralized place for reviewing system events
 
-
+NTP (Network Time Protocol) is critical in the context of SIEM systems for synchronizing the time across various devices and systems within a network.
+this is essential for SIEM to work correctly.
 
 
 
@@ -1233,12 +1271,16 @@ prevents unauthorized access even if you are root
 
 
 Wireshark is the ideal tool for analyzing “network_traffic_capture.pcap a packet capture file  (it has powerful network analysis capabilities)
+network protocol analyzer, primarily used for network troubleshooting, analysis, and communication protocol development,
+
+
 Snort is primarily a network intrusion detection system (IDS) and intrusion prevention system (IPS), not specifically tailored for analyzing pcap files.
 FTK Imager specializes in digital forensics for imaging and data recovery, not in the analysis of network packet data.
 Nessus is a vulnerability scanning tool used for identifying vulnerabilities in networks and systems, but it does not analyze packet capture files.
 
 
-
+Shodan primarily employs passive reconnaissance methods for gathering its data. 
+It collects and indexes publicly accessible information on the internet, such as banners and metadata from servers and devices
 
 
 
