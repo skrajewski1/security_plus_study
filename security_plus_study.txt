@@ -125,6 +125,9 @@ authentication methods for devices = digital certificates, MFA, MAC addresses
 embedded certificate in a smart card holds the user's private key, which is crucial for secure authentication processes
 
 MFA, the ‘Knowledge‘ factor, or ‘Something You Know‘, such as passwords and PINs, is generally considered the weakestMFA 
+"something you have" e.g. Entering a temporary verification code sent to your phone
+Fingerprint scan: This is an example of “Something You Are“ (biometric authentication).
+Using an email as a username: This pertains to “Something You Know“ (knowledge-based information).
 
 EDR (Endpoint Detection and Response) = continuously monitors and analyzes its endpoints for malicious activities and anomalies, and can respond to threats in real-time
 Intrusion Detection System (IDS): IDS monitors network traffic for suspicious activities
@@ -804,6 +807,18 @@ True Acceptance Rate (TAR): TAR measures the rate of correctly authenticating au
 
 
 Two-Factor Authentication: This requires two different methods of proving identity
+Replication involves continuously copying data to another location (which can be on-site or off-site) in real-time or near-real-time.
+Server clustering involves linking multiple servers to operate as a cohesive unit. This approach is used to improve system availability and reliability
+Extended Detection and Response (XDR) is a cybersecurity solution that integrates various security components to provide a unified and enhanced approach to threat detection
+SCADA systems are primarily used in industrial and infrastructure environments to oversee, monitor, and regulate industrial processes and control systems
+Memorandum of Understanding (MOU) is an agreement between two or more parties, outlining their intentions to work together on a project or in a partnership. I
+Product development plans should be classified as proprietary data. 
+
+Infrastructure as Code (IaC) is the management of infrastructure (networks, virtual machines, load balancers, and connection topology) in a descriptive model, using code rather than manual processes.
+Implementing version control and conducting regular code reviews is most critical for ensuring security of infrastructure
+Privilege Creep refers to the gradual accumulation of access rights by employees beyond what is necessary for their job functions.
+
+
 
 
 
@@ -901,6 +916,17 @@ Anomaly-based: Anomaly-based detection identifies unusual activities or deviatio
 
 screened subnet, also known as a demilitarized zone (DMZ), is the best choice for placing a web server that interacts with external users
 
+Data Link Layer 2 = Facilitating data transfer between network devices
+Providing end-to-end communication: This is the role of the Transport Layer (Layer 4).
+Routing data across multiple networks: This is the function of the Network Layer (Layer 3).
+Managing the physical connection between devices: The Physical Layer (Layer 1)
+
+route command =  To view and manipulate the routing table
+jump server = provide a secure intermediary for accessing devices across different security zones
+microservice architecture in application development = Applications are constructed as a collection of loosely coupled services using lightweight protocols
+SaaS (Software as a Service) model, the cloud provider manages all aspects of the infrastructure, platform, and software
+PaaS (Platform as a Service): While Platform as a Service reduces some responsibilities, it still requires the IT department to manage the applications running on the platform
+IaaS (Infrastructure as a Service): Infrastructure as a Service offers more control but also more responsibility in managing the operating systems, storage, and deployed applications.
 
 RADIUS are:
 Primarily used for network access
@@ -1226,7 +1252,16 @@ Risk register = To list known risks, their owners, risk scores, and recommended 
 
 footprinting / fingerprinting = To identify specific services and their versions running on individual systems.
 persistence = ability of an attacker to maintain access within a network over an extended period without detection.
+“Impossible Travel Time“ policy is designed to detect and prevent situations where a single account is used to log in from geographically distant locations within a timeframe that is impossible by normal travel means.
+Threat Likelihood is the most relevant metric for estimating the probability of malware attacks continuing at the same rate in the future. 
+System log in the Windows Event Viewer is the primary log for tracking events that are directly related to the functioning of the Windows operating system
+The most critical immediate action following the identification of a potential data breach is to enforce a legal hold
+Elliptic Curve Cryptography (ECC) is known for providing high levels of security with relatively smaller key sizes compared to traditional methods like RSA
+SAML (Security Assertion Markup Language) is used in federated identity management systems primarily to enable user authentication and identity sharing between different organizations.
 
+
+how does separating the control plane from the data plane contribute to overall network security?
+It limits the risk of network reconfiguration by attackers by isolating the management of the network from user data traffic.
 
 
 
@@ -1287,6 +1322,8 @@ Blockchain is best defined as a distributed and decentralized public ledger tech
 29. Linux
 
 netstat -an = command is used to display all active connections and listening ports on a server
+Nmap's -O (OS detection) flag allows the analyst to determine the operating system of a remote host by analyzing TCP/IP stack responses. This is the most effective tool for OS fingerprinting.
+
 ping 10.10.10.1: Ping is used to test the reachability of a host on an IP network and does not provide information about active connections or listening ports.
 nmap -sV 10.10.10.1: While Nmap is used for network scanning and security auditing, the ‘-sV‘ option is specifically for service version detection and not for reviewing all active connections.
 tracert 10.10.10.1: Traceroute is used to trace the path packets take to a network host, but it does not show active connections or listening ports.
@@ -1299,14 +1336,18 @@ SELinux uses the Mandatory Access Control (MAC) scheme which is more rigid compa
 Uses labels and contexts to control access based on predefined rules
 prevents unauthorized access even if you are root
 
- nmap -sV example.com  = designed to perform service version detection, allowing the company to identify what versions of software are running on its web application‘s server
-
+nmap -sV example.com  = designed to perform service version detection, allowing the company to identify what versions of software are running on its web application‘s server
+Nmap is a network scanning tool used for discovering devices and services on a network, including open ports, but it does not provide in-depth vulnerability assessments.
 
 Syslog is a standard logging facility on Linux that captures log messages from various sources and stores them, providing a centralized place for reviewing system events
 
 NTP (Network Time Protocol) is critical in the context of SIEM systems for synchronizing the time across various devices and systems within a network.
 this is essential for SIEM to work correctly.
 
+curl is the ideal tool for checking HTTP connectivity to a server. 
+ping can verify basic network connectivity to the server, it does not specifically test HTTP services.
+
+Tcpdump is a packet analyzer useful for capturing and analyzing network traffic but does not assess patch levels or specific software vulnerabilities.
 
 
 30. Tools 
@@ -1314,18 +1355,49 @@ this is essential for SIEM to work correctly.
 
 Wireshark is the ideal tool for analyzing “network_traffic_capture.pcap a packet capture file  (it has powerful network analysis capabilities)
 network protocol analyzer, primarily used for network troubleshooting, analysis, and communication protocol development,
+Wireshark is a network protocol analyzer that enables capturing and interactive display of real-time network traffic. 
+
+Nmap: While useful for scanning the network to discover hosts and services, Nmap does not provide real-time traffic analysis.
+Netcat: A versatile networking utility for reading and writing data across network connections, but not specialized for traffic analysis.
+Traceroute: Useful for displaying the route and measuring transit delays of packets, but not for in-depth traffic analysis.
 
 
 Snort is primarily a network intrusion detection system (IDS) and intrusion prevention system (IPS), not specifically tailored for analyzing pcap files.
 FTK Imager specializes in digital forensics for imaging and data recovery, not in the analysis of network packet data.
-Nessus is a vulnerability scanning tool used for identifying vulnerabilities in networks and systems, but it does not analyze packet capture files.
 
+Nessus is a vulnerability scanning tool used for identifying vulnerabilities in networks and systems, but it does not analyze packet capture files.
+vulnerability scanning tool that is specifically designed to assess servers for security weaknesses, including outdated patches and known vulnerabilities
 
 Shodan primarily employs passive reconnaissance methods for gathering its data. 
 It collects and indexes publicly accessible information on the internet, such as banners and metadata from servers and devices
 
 
 CVE (Common Vulnerabilities and Exposures) = provides a standardized list of identified information security vulnerabilities and exposures
+
+WPS is vulnerable to brute-force attacks that attempt different PINs until successful, allowing tools like Reaver to discover the PIN within hours.
+
+
+
+31. Miscellanous
+
+EAP-TLS requires certificates on both the 802.1X server and the client devices
+Cloud Access Security Broker (CASB) is the ideal solution for improving security across different cloud services.
+
+If you have a Bring Your Own Device (BYOD) policy then you want:
+implementing a Mobile Device Management (MDM) solution to remotely wipe data and enforce security policies.
+
+use of the Digital Signature Algorithm (DSA) in sending a sensitive email ensures the aspect of non-repudiation
+The RA assists in the registration process but does not issue certificates
+a ‘Threat‘ is any potential danger or event that can compromise the confidentiality, integrity, or availability of data or systems
+ Vulnerability is a weakness or gap in a system‘s design, implementation, or operation that could be exploited by a threat, not the danger itself.
+Risk is the potential for damage or loss resulting from a threat exploiting a vulnerability.
+A breach is an incident where security has been bypassed or violated, which is the consequence of a threat exploiting a vulnerability, rather than the potential danger itself.
+Security awareness training is a crucial administrative control for reducing the risk of social engineering attacks.
+
+SYN Flood Attack, where numerous SYN requests are sent to the target server but are not proceeded to the next step of the TCP three-way handshake (the server‘s SYN-ACK response and the client‘s ACK response)
+
+
+
 
 
 
