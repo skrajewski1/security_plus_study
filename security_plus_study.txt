@@ -33,6 +33,7 @@ Author: Sean Krajewski
 27. Penetration Testing
 28. Blockchain 
 29. Linux
+30. Tools
 
 
 1. Note to Reader 
@@ -99,6 +100,7 @@ examples: recovering data from backups, disaster recovery plans (DRP), incident 
 
 compensating security controls
 examples: backup power systems, Multi-factor authentication (MFA), network segmentation, application sandboxing
+provide alternative security measures when primary controls are not feasible.
 
 
 directive security controls are implemented through documentation i.e. policies, procedures, guidelines
@@ -142,6 +144,8 @@ VPN Gateway: This is used for secure remote access and does not address the spec
 Firewall: A firewall‘s main function is to provide security by monitoring and controlling incoming and outgoing network traffic, not load balancing.
 load balancer is the ideal solution for managing high traffic and evenly distributing network load across multiple servers
 
+Split Tunnel and Full Tunnel configurations in VPN connections:
+Split Tunnel routes only the internal network traffic through the VPN, while Full Tunnel routes all the user‘s internet traffic through the VPN.
 
 Vertical Scaling refers to the process of adding more resources to an existing server to increase its capacity.
 
@@ -150,9 +154,12 @@ Vertical Scaling refers to the process of adding more resources to an existing s
 Wireless jamming attack
 example: fluctuating wireless connectivity in the office, with the network being inaccessible on certain days but functioning well on others
 
+Data Owner is responsible for overseeing the organization‘s data policies, guidelines, and procedures.
+Data Custodian is typically responsible for the technical environment and database systems where data is stored, not for policy management.
+Data Controller determines the purposes and means of processing personal data but does not necessarily manage data quality and standards.
+Data Processor is responsible for processing data on behalf of the data controller, which is different from setting policies and ensuring data quality.
 
-
-
+Proprietary information refers to data or knowledge that is unique to your organization and critical to maintaining a competitive advantage
 
 
 4. Encryption
@@ -398,6 +405,9 @@ Bluejacking: sending unwanted messages usually as a prank
 Bluesnarfing: unauthorized access to a bluetooth device to steal data such as contacts,messages
 Bluebugging: gaining remote control over bluetooth device to eavesdropping
 
+War Driving. This involves individuals moving around an area to discover and map wireless networks (they look for such as encryption security, signal strength, and SSID)
+
+
 
 open service ports are usually the most probable cause of unauthorized access to be exploited on a network entry points
 many devices come from the factory with default credentials i.e. username/password that should be changed because they can be looked up online relatively easily.
@@ -491,6 +501,9 @@ website where the user is authenticated, leading to unauthorized actions.
 
 Keyloggers are hardware or software tools used to record keystrokes made on a computer keyboard
 
+
+Security Content Automation Protocol (SCAP) = To facilitate communication between vulnerability scanners and other security and management tools.
+By standardizing data formats and communication methods, SCAP enhances the ability of these tools to work together effectively
 
 End of Life (EOL) when a product will likely not receive security patches and other updates
 
@@ -797,6 +810,8 @@ identify and prioritize essential systems and workflows necessary for patient ca
 
 18. Wireless Security Settings
 
+primary function of a network switch in a LAN environment = connect devices within a network and manage data traffic based on MAC addresses
+
 
 You should change default configs with devices from the manufacture (best practice)
 PINs are used in bluetooth device pairings
@@ -997,7 +1012,7 @@ Non-repudiation = ensures that an entity cannot deny the authenticity of a trans
 COPE (Corporate-Owned, Personally-Enabled) policy example:
 the company provides mobile devices to employees, retaining ownership and control over the devices, while allowing employees to use them for limited personal purposes.
 
-
+Change Management Policy is crucial in ensuring that all modifications to IT systems, applications, and critical infrastructure components are made in a controlled, documented, and coordinated manner
 
 
 
@@ -1094,6 +1109,8 @@ risk avoidance = for example, disabling certain system functions or shutting dow
 risk mitigation = the process of taking proactive measures to reduce the impact of identified risks
 example:  identifying a software flaw, a company immediately works on a fix
 
+By standardizing data formats and communication methods, SCAP enhances the ability of these tools to work together effectively
+
 
 Recovery time objective (RTO) = maximum allowable time to restore critical business functions after a disruption
 Recovery point objective (RPO) = maximum acceptable amount of data loss measured by a specific point in time before a disaster or outage
@@ -1184,6 +1201,25 @@ tracert 10.10.10.1: Traceroute is used to trace the path packets take to a netwo
 SELinux uses the Mandatory Access Control (MAC) scheme which is more rigid compared to DAC (used in windows)
 Uses labels and contexts to control access based on predefined rules
 prevents unauthorized access even if you are root
+
+ nmap -sV example.com  = designed to perform service version detection, allowing the company to identify what versions of software are running on its web application‘s server
+
+
+
+
+
+
+
+30. Tools 
+
+
+Wireshark is the ideal tool for analyzing “network_traffic_capture.pcap a packet capture file  (it has powerful network analysis capabilities)
+Snort is primarily a network intrusion detection system (IDS) and intrusion prevention system (IPS), not specifically tailored for analyzing pcap files.
+FTK Imager specializes in digital forensics for imaging and data recovery, not in the analysis of network packet data.
+Nessus is a vulnerability scanning tool used for identifying vulnerabilities in networks and systems, but it does not analyze packet capture files.
+
+
+
 
 
 
