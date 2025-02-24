@@ -157,6 +157,9 @@ Split Tunnel routes only the internal network traffic through the VPN, while Ful
 
 Vertical Scaling refers to the process of adding more resources to an existing server to increase its capacity.
 
+Netflow primary function = To collect and analyze IP traffic statistics for understanding network traffic patterns.
+Communication Plan is the dedicated section that outlines how to effectively communicate about security incidents
+
 
 
 Wireless jamming attack
@@ -168,6 +171,15 @@ Data Controller determines the purposes and means of processing personal data bu
 Data Processor is responsible for processing data on behalf of the data controller, which is different from setting policies and ensuring data quality.
 
 Proprietary information refers to data or knowledge that is unique to your organization and critical to maintaining a competitive advantage
+
+Gramm-Leach-Bliley Act (GLBA), also known as the Financial Services Modernization Act of 1999, is a U.S. federal law that specifically applies to financial institutions.
+GLBA requires these institutions to provide clear explanations to their customers about their information-sharing practices.
+
+ Trusted Platform Module (TPM) is a hardware-based security device that provides a secure environment for cryptographic operations
+
+
+
+
 
 
 4. Encryption
@@ -264,7 +276,7 @@ Involves a cryptographic hash function in combination with a secret cryptographi
 
 Cyclic Redundancy Check (CRC) =  non-cryptographic hash function often used for error-checking purposes
 
-
+sanitation = The removal of sensitive data from a system or storage device to prevent unauthorized access.
 
 6. Digital Signatures
 
@@ -285,8 +297,9 @@ Registration Authority (RA) role in Public Key Infrastructure (PKI) is accpeting
 
 
 Certificate Authority (CA)  acts as a third-party of digital certs
+ It issues certificates to end-users, based on the authority granted by the root CA
 primarily is responsible for issuing digital certs and verify identity of entities (i.e. create and use signing keys for issuing certificates)
-
+Trust is established for a CA By having its root certificate included in the operating system‘s and web browsers‘ trusted root certificate stores.
 
 
 Certificate Revocation list (CRL) list of revoked certs issed by CA of the PKI make sure revoked certs aren't trusted
@@ -444,6 +457,10 @@ WPA2WPA2
 
 Example of typosquatting :  ‘onlinestorez.com‘ (attacker) instead of ‘onlinestore.com (legit)
 
+Disassociation attack example : Sending a frame that impersonates a client‘s request to end its session with the access point.
+A disassociation attack in wireless networking is executed by sending a frame to the access point that mimics a legitimate client‘s request to disconnect
+
+
 
 
 10. Social Engineering
@@ -516,6 +533,8 @@ Example:
 
 CSRF (cross-site request forgery) = attacker tricks the user‘s browser into submitting a request to a different 
 website where the user is authenticated, leading to unauthorized actions.
+example:  The malicious website uses a script to send a request to the financial service website using the user‘s authenticated session, without the user‘s knowledge or consent
+
 
 Keyloggers are hardware or software tools used to record keystrokes made on a computer keyboard
 
@@ -574,8 +593,8 @@ The batch file, named sync.bat and located at C:\Windows\Tasks\, contains the fo
 4. Z:\tools\sync_tool.exe
 5. net use Z: /delete
 
-
-
+ race condition occurs when the behavior of software depends on the sequence or timing of uncontrollable events, such as the state of a resource changing between its check and use. 
+ Target of Evaluation (TOE) refers to the specific system, software, or product being assessed for its security properties
 
 
 
@@ -649,6 +668,7 @@ code injection is how XSS attacks happen i.e inject malicious script to the user
 LDAP injection exploits a protocol used for managing and accessing networked resources
 LDAP is a centralized directory service used for storing and managing user accounts, authentication, and authorization information in large organizations. 
 It allows multiple applications and services to query and authenticate users against a single directory (e.g., Active Directory, OpenLDAP).
+LDAP queries the central directory to verify the user‘s credentials and retrieve their account information
 
 
 
@@ -699,6 +719,8 @@ Impossible travel is a situation wherein an account is accessed from a location 
 Out of cycle logging = logs are make outside of there regular intervals/with abnormal values which might signal malicious activity
 
 SIEM (Security Information and Event Management) = aggregates and analyzes log data from different security devices, providing insights and correlations necessary for effective security management
+Extended Detection and Response (XDR) is a security solution that offers broad threat detection and response capabilities across multiple domains and layers of an organization‘s IT environment
+
 
 Unified Threat Management (UTM) System is the ideal solution for organizations seeking a comprehensive and centrally-managed approach to network security
 combine various essential security features into a single platform
@@ -776,7 +798,8 @@ Dynamic KBA: This involves questions generated in real-time based on publicly av
 Biometric Authentication: This type of authentication uses biological characteristics, such as fingerprints or facial recognition
 most critical metric is False Acceptance Rate (FAR); you want this as low as possible
 False Rejection Rate (FRR)
-Crossover Error Rate (CER)  use this to assess accuracy (lower is better)
+Crossover Error Rate (CER)  use this to assess accuracy (lower is better) 
+CER = The rate at which the system‘s False Acceptance Rate (FAR) equals its False Rejection Rate (FRR)
 True Acceptance Rate (TAR): TAR measures the rate of correctly authenticating authorized individuals
 
 
@@ -901,6 +924,11 @@ SAML is a widely used Single Sign-On (SSO) protocol designed for enterprise envi
 allows employees to log in once and gain access to multiple cloud-based and internal applications without needing to re-authenticate for each service.
 
 Secure Web Gateway (SWG) is the most effective solution for managing and ensuring safe internet usage in an enterprise.
+ logic bomb, a type of malicious code that is triggered by a specific event or condition
+Logic bombs are dormant until their conditions are met, at which point they execute their malicious payload, which can range from data corruption to system disruption.
+
+Clickjacking is a deceptive technique where attackers overlay a transparent, clickable layer over what appears to be a legitimate part of a webpage.
+
 
 
 
@@ -1085,6 +1113,9 @@ spraying attack involves trying a small set of commonly used passwords (often ve
 
  Hardware Security Module (HSM) primary function in a network security environment: generate and store RSA encryption keys, providing hardware-based encryption
 
+Rainbow Table Attack. This type of attack uses precomputed tables (Rainbow Tables) to quickly match cryptographic hashes to their plaintext equivalents
+
+
 
 24. Incident Response Activities
 
@@ -1143,6 +1174,8 @@ Qualitative risk assessment = is based on subjective judgment and focuses on the
 often using descriptive terms like "high," "medium," and "low" rather than numerical values.
 
 Single loss expectancy (SLE) = involves numerical values to estimate the potential financial impact of a risk.  Example of quatitative risk assessement
+formula = SLE = AV × EF  ( Asset Value (AV) by the Exposure Factor (EF) )
+
 ALE (Annual Loss Expectancy) = estimated yearly financial loss due to a specific risk, calculated by multiplying the Single Loss Expectancy (SLE) by the Annual Rate of Occurrence (ARO).
 
 Annual Rate of Occurrence (ARO) = It quantifies the likelihood of an event happening in a year.
@@ -1153,6 +1186,8 @@ SLE=Asset Value (AV)×Exposure Factor (EF)
 Risk register = omprehensive document used in risk management and project management to identify, assess, and track risks
 Risk tolerance = refers to specific level of risk an org is willing to accept to accomplish goals
 Risk appetite = general term that describes an organization’s overall attitude towards risk-taking
+Residual Risk Residual Risk refers to the level of risk that remains in an organization after all risk controls and mitigation strategies have been implemented.
+
 
 example of Risk transference:   Contracting out a specialized technical component when the company's employees lack the necessary skill
 example of cyber insurance:   Cybersecurity insurance transfers the financial risk of a cyber incident to the insurance company, meaning the organization is shifting the burden of potential financial loss to another party.
@@ -1185,6 +1220,13 @@ OWASP (Open Web Application Security Project) = most beneficial resource for sof
 
 EOSL (End of Service Life) is the term used to describe the final stage in a product‘s lifecycle, particularly in the context of software and hardware. 
 TCO (Total Cost of Ownership) = total cost of owning a product or system over its entire lifecycle, including acquisition, operation, and maintenance costs.
+
+Risk register = To list known risks, their owners, risk scores, and recommended security controls for risk mitigation.
+
+
+footprinting / fingerprinting = To identify specific services and their versions running on individual systems.
+persistence = ability of an attacker to maintain access within a network over an extended period without detection.
+
 
 
 
@@ -1283,6 +1325,7 @@ Shodan primarily employs passive reconnaissance methods for gathering its data.
 It collects and indexes publicly accessible information on the internet, such as banners and metadata from servers and devices
 
 
+CVE (Common Vulnerabilities and Exposures) = provides a standardized list of identified information security vulnerabilities and exposures
 
 
 
