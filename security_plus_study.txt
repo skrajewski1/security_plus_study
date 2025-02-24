@@ -1395,9 +1395,86 @@ A breach is an incident where security has been bypassed or violated, which is t
 Security awareness training is a crucial administrative control for reducing the risk of social engineering attacks.
 
 SYN Flood Attack, where numerous SYN requests are sent to the target server but are not proceeded to the next step of the TCP three-way handshake (the server‘s SYN-ACK response and the client‘s ACK response)
+after an application undergoes an update or modification, an application restart might be necessary to apply the changes.
+third-party certificate is issued by a trusted third-party Certificate Authority and not by the entity itself.
+Impact analysis is an essential component of the Change Management Process. 
+Key exchange refers to the methods and protocols used to securely share cryptographic keys between parties,
+The Secure Enclave is often embedded in modern smartphones and tablets. It provides a secure environment for sensitive operations, such as mobile payments,
+Key escrow systems, due to their centralized storage of cryptographic keys, might become attractive targets for attackers
+Diagrams provide a visual representation of an organization‘s IT infrastructure. When a significant change occurs, updating diagrams first ensures that team members have a clear and updated visual understanding of the current state.
+Online Certificate Status Protocol (OCSP) is a protocol used to obtain the revocation status of a digital certificate in real-time
+Hardware Security Module (HSM) offers high-performance cryptographic processing, making it suitable for organizations that handle high volumes of cryptographic operations
+Hardware Security Module (HSM) is often integrated into servers, especially in data centers, to provide a secure foundation for cryptographic operations.
+Record encryption targets individual data entries or rows within a database
+Public key infrastructure (PKI) is a framework used to manage digital certificates and public-key encryption
+A wildcard certificate is designed to secure multiple subdomains under a single domain name.
+asymmetric encryption, the public key is used to encrypt data.
+Ultrasonic sensors work by emitting sound waves at frequencies typically beyond human hearing. By measuring the change in the returned wave, the sensor can detect motion.
+A self-signed certificate is issued and signed by the same entity, not by a trusted Certificate Authority (CA)
+
+Digital signatures provide a cryptographic proof of the origin and integrity of digital data.
+Downtime refers to the period when a system, service, or application is unavailable.
+Physical controls are measures taken to protect tangible assets, including people, buildings, and systems. 
+Managerial controls, also known as administrative controls, involve the establishment and maintenance of an organization‘s security framework
+Detective controls are designed to identify and react to security incidents as they occur; rovides a warning or indication of violations
+A hardware security module (HSM) is a physical device that provides a secure environment for storing and managing digital cryptographic keys, including those used in digital certificates. 
+Deception and disruption technology aims to mislead attackers, diverting them from actual targets and wasting their resources.
+Directive controls are controls that mandate specific actions or behaviors.
+implementing strong encryption, an organization is upholding the confidentiality principle of the CIA Triad
+Availability ensures that data and systems are accessible to authorized users when they need them.
+honeynet is a network of honeypots that simulates a larger network environment
+Deterrent controls are designed to discourage potential attackers by increasing the perceived difficulty or risk of attacking
+ownership, often represented by change owners or managers, is responsible for ensuring that a proposed change aligns with business objectives. 
+CIA Triad stands for Confidentiality, Integrity, and Availability
+
+Data masking is the process of obfuscating specific data within a database, making it inaccessible for unauthorized users
+This is especially useful in test environments where real data is needed but without the associated risks.
 
 
+ primary outcome of a Gap Analysis in security is a comprehensive report that identifies vulnerabilities, weaknesses, and discrepancies in the current security posture
+access control, the Subject (or System) is the entity that requests access to a resource.
+ 
+Change Management Process is a systematic approach to handling changes in IT infrastructure. 
+It considers both existing configurations and desired outcomes, ensuring that changes are implemented smoothly and without unintended disruptions
+Partition encryption targets specific segments or sections (partitions) of a storage medium.
 
+Microwave sensors emit microwave radiation patterns. 
+
+
+Key stretching involves deliberately slowing down the hashing process. This makes brute-force attacks more time-consuming and less feasible, enhancing the security of hashed passwords.
+Restricted activities refer to specific actions or tasks that are limited or prohibited within a system, network, or organization
+Control Plane in network architecture is responsible for determining how data packets should be routed or forwarded
+Two-factor authentication (2FA) requires users to provide two distinct forms of identification
+self-signed certificate is issued and signed by the same entity, not by a trusted Certificate Authority. 
+Salting ensures that even if two users have the same password, their hashed passwords will be different.
+approval process involves obtaining formal consent from the relevant authorities or stakeholders before proceeding with a proposed change.
+ initial step in obtaining a digital certificate from a Certificate Authority is the Certificate Signing Request (CSR) generation
+Authentication is the process of verifying the identity of a user or system
+hardware security module (HSM) is a cryptographic device that provides a secure environment for generating, storing, and managing cryptographic keys
+Corrective controls are reactive measures taken after a security incident has occurred.
+Policy-driven Access Control determines access rights based on predefined policies
+
+Steganography is the practice of hiding information within other non-secret data or media, such as images or audio files.
+its primary purpose is to conceal the existence of the hidden information, not to facilitate key exchange.
+
+Secure Enclave provides a hardware-isolated environment in modern computing devices. It is designed to handle sensitive operations, such as biometric data processing, securely and separately from the main processor.
+Certificate Authority (CA) is responsible for issuing and verifying digital certificates
+online Certificate Status Protocol (OCSP) is used to check the revocation status of a digital certificate in real-time. 
+Key escrow refers to a system where third-party entities hold cryptographic keys. 
+Hardware Security Module (HSM) is a physical device specifically designed to manage, process, and store cryptographic keys securely outside of the host‘s environment
+root of trust serves as a foundational element in a security system, representing a trusted entity that verifies the linkage between a public key and its owner
+security policy or framework outlines the organization‘s desired security standards, practices, and controls. 
+Algorithms refer to the mathematical processes used in encryption to transform plaintext data into encrypted ciphertext.
+honeypot is a decoy system designed to appear vulnerable to attackers. Its primary purpose is to attract and divert attackers from real systems, allowing organizations to study their tactics and gather intelligence.
+ honeytoken can be embedded within a database or other data repositories. If the honeytoken is queried or accessed, it indicates potential unauthorized activity, as the token serves no real purpose other than detection.
+
+Trusted Platform Module (TPM) can be used to enhance the security of software-based encryption by providing a hardware-based root of trust.
+It ensures that cryptographic operations are anchored in hardware, making them more resistant to software-based attacks.
+maintenance window is a predefined time period during which changes, updates, or maintenance activities can be carried out with minimal disruption to business operations. 
+maintenance window is a predefined time period during which changes, updates, or maintenance activities can be carried out with minimal disruption to business operations. 
+
+After applying a patch or update to a service, a service restart is often required to apply the changes
+Periodic Gap Analyses ensure that organizations remain compliant with these standards, adapt to new threats, and maintain a robust security posture.
 
 
 
