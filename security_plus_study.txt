@@ -1562,6 +1562,52 @@ amplified DDoS attack, the attacker uses multiple compromised devices to send sm
 Resource inaccessibility refers to situations where users are unable to access certain files, services, or resources. 
 
 
+Wireless networks, due to their broadcast nature, are susceptible to “man-in-the-middle“ attacks. 
+Attackers can intercept and potentially modify data transmitted between two parties without either party knowing.
+
+Vishing, or voice phishing, involves attackers using phone calls to deceive victims into providing personal or financial information. 
+
+
+A buffer overflow vulnerability occurs when an application does not properly validate or limit the size of data before storing it in a buffer or memory space
+This can lead to the overflow of data into adjacent memory, potentially leading to code execution or application crashes.
+
+Software-defined wide area network (SD-WAN)
+SD-WAN is a technology that allows organizations to build high-performance WANs using lower-cost and commercially available internet access, providing secure connections between multiple locations
+
+
+Journaling involves keeping a record of all changes made to data This method allows for recovery to any specific point in time by replaying the changes from the journal
+
+Microservices architecture involves developing an application as a collection of small, independent services that run in their own processes This enhances scalability, as each service can be scaled independently, and maintainability, as each service can be updated or replaced without affecting others
+Software-Defined Networking (SDN) decouples the network control plane from the forwarding plane, allowing for a more flexible and programmable network configuration
+
+In a “fail-open“ mode, if the security device encounters a failure, it will default to allowing all traffic to pass through, ensuring continuity of service at the expense of security
+Generators are essential for data centers during maintenance or repair activities on the main power source
+Next-Generation Firewalls (NGFWs) combine traditional firewall capabilities with other functionalities like application awareness, intrusion prevention, and identity-based controls
+Private data classification refers to personal information about individuals that is meant to be kept confidential and not shared widely
+
+Platform diversity refers to the use of various computing platforms within an organization
+Power consideration deals with the energy consumption and power requirements of a system
+A Virtual Private Network (VPN) allows for the creation of a secure, encrypted connection over the internet, enabling users to access a private network remotely
+Obfuscation involves making code or data harder to understand, typically to prevent reverse engineering or unauthorized interpretation
+
+Web Application Firewalls (WAFs) are specifically designed to protect web applications from threats like SQL injection, cross-site scripting, and other web-based attacks
+
+Multi-cloud systems allow organizations to use multiple cloud service providers, offering flexibility in choosing services and avoiding dependence on a single vendor, thus preventing vendor lock-in
+In a serverless architecture, developers write code that is executed in response to events The cloud provider automatically manages the infrastructure, including server provisioning and scaling, allowing developers to focus on code
+Transport Layer Security (TLS) is a protocol that provides secure communications over the internet by encrypting web traffic, commonly used in web browsers and other applications
+
+A device in tap/monitor mode observes a copy of the network traffic without making any changes or interventions It is used primarily for monitoring and logging purposes
+Layer 4 refers to the transport layer in the OSI model Firewalls operating at this layer focus on data like port numbers and protocol identification
+
+
+Trade secrets refer to proprietary information, formulas, processes, or any information that provides a business advantage over competitors who do not know or use it
+Layer 7 firewalls, also known as application-layer firewalls, inspect and make decisions based on the content of the data, including HTTP headers, payloads, and other application-specific data
+In a microservices architecture, services often communicate with each other over a network Ensuring secure and authenticated communication between these services is crucial to prevent unauthorized access and potential breaches
+
+
+
+
+
 
 
 
