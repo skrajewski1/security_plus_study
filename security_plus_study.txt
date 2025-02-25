@@ -1655,11 +1655,17 @@ Enumeration refers to the process of identifying and documenting the hardware co
 Enabling host-based firewalls helps protect user devices from unauthorized access and man-in-the-middle (MitM) attacks, also known as on-path attacks. 
 SASE is the best option because it provides secure remote access to cloud-based applications for mobile users.
 A change management process ensures that all updates, patches, and system modifications are reviewed, tested, and documented before deployment.
+SCAP (Security Content Automation Protocol) is a suite of standards that enable automated vulnerability management, compliance monitoring, and security configuration assessment. It is used to automate the validation and patching of security issues by assessing systems for vulnerabilities and ensuring compliance with security policies.
+A Hardware Security Module (HSM) is the best solution for securely storing private keys.
+A Data Loss Prevention (DLP) system is designed to monitor and prevent the transmission of sensitive information, such as credit card numbers, outside the organization. 
 
+A keylogger is a type of malware designed to record keystrokes, and it could send data intermittently to an external server at random times. 
+The MTBF (Mean Time Between Failures) is a prediction of how often a repairable system will fail.
 
+Instant messaging is commonly used as an attack vector, and one way to help protect against malicious links delivered by instant messaging is a host-based firewall.
 
-
-
+Server hardening involves configuring the system to follow security best practices, such as disabling unnecessary services, ensuring that services do not run with privileged accounts, and managing SSL certificates properly.
+An Intrusion Prevention System (IPS) is a security control designed to detect and monitor network traffic for suspicious patterns or potential intrusions. 
 
 
 
