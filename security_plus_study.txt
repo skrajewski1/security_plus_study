@@ -1603,13 +1603,18 @@ Layer 4 refers to the transport layer in the OSI model Firewalls operating at th
 Trade secrets refer to proprietary information, formulas, processes, or any information that provides a business advantage over competitors who do not know or use it
 Layer 7 firewalls, also known as application-layer firewalls, inspect and make decisions based on the content of the data, including HTTP headers, payloads, and other application-specific data
 In a microservices architecture, services often communicate with each other over a network Ensuring secure and authenticated communication between these services is crucial to prevent unauthorized access and potential breaches
+SD-WAN technology focuses on optimizing and enhancing the performance of wide area networks by dynamically routing traffic based on current network conditions and application requirements
+Load balancing aims to distribute workloads to prevent any single server from being overwhelmed, while clustering groups servers together to provide redundancy and ensure continuous availability
+A proxy server acts as an intermediary between end users and the internet, allowing for content filtering, caching, and potentially providing anonymity by masking the user‘s IP address
+When selecting effective controls, it‘s crucial to ensure that they are compatible with the existing infrastructure to ensure seamless integration and optimal performance
+ICS and SCADA systems are used to control and monitor industrial processes, often in critical infrastructure like power plants, water treatment facilities, and manufacturing
 
+Secure Access Service Edge (SASE) is a cloud-based platform that combines networking and security functions to provide secure access to applications, regardless of where the applications or users are located
+Containerization involves encapsulating an application and its dependencies in a “container,“ allowing it to run consistently across different environments
+Logical segmentation divides a network into separate segments based on criteria like function, security levels, or organizational structure, which can help in isolating potential security threats
+In a “fail-closed“ mode, if the security device encounters a failure, it will default to blocking all traffic, prioritizing security over service availability
 
-
-
-
-
-
-
+8021X is a standard for port-based network access control It provides authentication to devices attached to a LAN port, ensuring that only authenticated devices can access the network
+The “technology“ component of capacity planning ensures that the organization has the required hardware, software, and tools to efficiently support its operations and growth
 
 
