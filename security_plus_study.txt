@@ -1551,6 +1551,15 @@ Phishing is a form of social engineering where attackers send deceptive emails t
 Data exfiltration refers to the unauthorized transfer of data from within an organization to an external destination. 
  amplified DDoS attack, the attacker exploits third-party servers to amplify the amount of traffic sent to the victim
 A virus is a type of malware that attaches itself to a host file. When the host file is executed, the virus can spread to other files and systems. Viruses rely on user action, such as opening an infected file, to propagate.
+A logic bomb is a type of malware that lies dormant until a specific condition or trigger event occurs. In this case, the trigger is the opening of a specific application, at which point the logic bomb activates and executes its malicious payload.
+
+Business email compromise (BEC) is a sophisticated scam where attackers compromise legitimate business email accounts to deceive employees, partners, or vendors into transferring money or revealing sensitive information.
+A collision attack in cryptography involves finding two different sets of data that produce the same hash value.
+A credential replay attack involves capturing authentication credentials, such as usernames and passwords, and then reusing them to gain unauthorized access to a system.
+Out-of-cycle logging refers to log entries that occur outside of regular business hours or expected usage patterns.
+Flaws in the way an operating system manages memory allocation, handles processes, or interacts with hardware are considered operating system (OS)-based vulnerabilities.
+amplified DDoS attack, the attacker uses multiple compromised devices to send small requests to third-party servers.
+Resource inaccessibility refers to situations where users are unable to access certain files, services, or resources. 
 
 
 
