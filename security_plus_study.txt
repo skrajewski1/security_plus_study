@@ -1649,5 +1649,24 @@ Virtualization enables the creation of virtual instances (or virtual machines) o
 When dealing with third-party cloud vendors, organizations must be cautious about where their data is stored (data sovereignty) and 
 who has access to it Ensuring proper access controls and understanding data residency regulations are crucial for maintaining data security and compliance
 
+The record encryption strategy involves encrypting specific records or fields (such as employee information) within a database or storage system, while leaving other records (like public details) in plaintext. 
+
+Enumeration refers to the process of identifying and documenting the hardware components of a device, such as storage drives, RAM, and adapter cards, before decommissioning. 
+Enabling host-based firewalls helps protect user devices from unauthorized access and man-in-the-middle (MitM) attacks, also known as on-path attacks. 
+SASE is the best option because it provides secure remote access to cloud-based applications for mobile users.
+A change management process ensures that all updates, patches, and system modifications are reviewed, tested, and documented before deployment.
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
