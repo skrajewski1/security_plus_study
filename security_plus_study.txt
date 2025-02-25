@@ -1475,6 +1475,78 @@ maintenance window is a predefined time period during which changes, updates, or
 
 After applying a patch or update to a service, a service restart is often required to apply the changes
 Periodic Gap Analyses ensure that organizations remain compliant with these standards, adapt to new threats, and maintain a robust security posture.
+Test results provide evidence of the success of a change implementation. 
+Data masking does not permanently alter the original data
+Impact analysis involves assessing the potential consequences and effects of a proposed change on various aspects of the organization, including operations, finances, stakeholders, and more.
+Policy Enforcement Point (PEP) is responsible for enforcing security policies in a system or network.
+Adaptive Identity adjusts authentication requirements based on various factors, such as user behavior, device, location, and context.
+Biometric access controls, such as fingerprint or retina scanners, are physical measures designed to prevent unauthorized physical access to a facility or specific area within a facility.
+Policy Administrator is responsible for defining, managing, and updating security policies within an organization‘s security infrastructure
+key length, often measured in bits, determines the strength and security of an encryption algorithm.
+Key Management System ensures that cryptographic keys are available to authorized users when needed.
+Tokenization is the process of replacing sensitive data with non-sensitive tokens or placeholders.
+Blockchain is the technology that underpins cryptocurrencies. It serves as a decentralized database of transactions, ensuring transparency and security.
+Threat Scope Reduction involves narrowing down or minimizing the potential attack vectors.
+Policy Engine evaluates and makes decisions based on predefined security policies.
+Digital certificates are a form of “something you have“ authentication. They are digital documents that a system can present as proof of its identity, and they are typically issued by a trusted Certificate Authority (CA).
+Key Management System is primarily responsible for the centralized management of cryptographic keys throughout their lifecycle. It handles key generation, distribution, storage, rotation, and deletion.
+Data Plane, also known as the forwarding plane, is responsible for the actual forwarding or transmission of data packets in network architecture.
+Key escrow refers to the process where a trusted third party holds a copy of the encryption key.
+Transport/communication encryption is used to secure data during its transmission over networks. 
+Biometric systems authenticate individuals based on their unique physical or behavioral characteristics. Fingerprint or retina scans are examples of “something you are“ authentication.
+In the context of a Gap Analysis for security, the “Security Delta“ refers to the difference between the current security measures in place and the desired or required state as outlined in the security policy or framework.
+digital signature is used to verify the authenticity and integrity of a message or document
+End-of-life systems are those that are no longer supported by their manufacturer and do not receive security updates or patches
+Agentless software operates without needing to be installed on the target system
+Access Control List (ACL) is a list that specifies which users or groups have access to certain resources and what actions they can perform,
+unskilled attacker, often referred to as a “script kiddie,“ typically lacks advanced hacking skills
+buffer overflow attack occurs when an application receives more data than it can handle, causing the excess data to overflow into adjacent memory locations
+host-based firewall is a software firewall installed on individual hosts or devices.
+Trojan is a type of malware that disguises itself as a legitimate application or file. However, once executed, it delivers a malicious payload, potentially harming the system or stealing data.
+Vulnerabilities that exist within specific applications, often due to issues like improper input validation, logic errors, or insecure configurations, are considered application-level vulnerabilities
+Managed service providers (MSPs) offer a range of IT services to businesses, including helpdesk services
+birthday attack is based on the birthday paradox in probability theory. In the context of cryptography, it refers to the likelihood that two different sets of data will produce the same hash value in a set of randomly generated data
+Bluetooth spoofing involves an unauthorized device pretending to be a known or trusted Bluetooth device
+Firmware exploitation targets vulnerabilities in the software that controls hardware devices
+zero-day exploit, especially one that hasn‘t been seen before, indicates a high level of sophistication
+Supply chain vulnerabilities arise from weaknesses in the process of creating, delivering, and maintaining products or services.
+Time-of-use (TOU) refers to the moment when a system uses a condition or state. 
+If an attacker can alter the system‘s state after it has been checked (TOC) but before it is used (TOU), they can exploit this type of race condition.
+An injection attack involves inserting malicious data or commands into an application, often with the intent of targeting databases i.e. SQL injection
+environmental attack can involve manipulating factors like temperature, humidity, or lighting to cause harm or disruption
+wireless attack involves targeting wireless networks, either to gain unauthorized access or to eavesdrop on communications
+ “blocked content“ indicator suggests that certain content, requests, or actions are being blocked by security measures
+Cryptographic vulnerabilities occur when encryption algorithms are implemented incorrectly, use weak or compromised keys, or when outdated cryptographic methods are used.
+Buffer overflow vulnerabilities can be exploited using shellcode, which is a small piece of code used to provide an attacker with control over a system
+Race conditions occur when the behavior of a system depends on the relative timing of events, such as the timing between checking a condition and using it.
+Unsupported systems and applications are those that no longer receive security updates, patches, or vendor support. 
+Isolation involves keeping systems or components separate to prevent potential threats or failures from spreading.
+A watering hole attack involves compromising a website frequently visited by a specific group or organization
+Cross-site scripting (XSS) is a web-based vulnerability where attackers inject malicious scripts into web pages.
+A downgrade attack involves manipulating a system or communication to use a weaker encryption algorithm or protocol version.
+Cloud-specific vulnerabilities are unique to cloud environments and arise due to the shared, scalable, and on-demand nature of cloud services.
+Cross-site scripting (XSS) allows attackers to inject malicious scripts into web pages. When executed, these scripts can steal session cookies, user data, or perform actions on behalf of the user without their knowledge.
+level of sophistication reflects a threat actor‘s capability, including their ability to execute prolonged and stealthy attacks
+System hardening involves implementing measures to secure a system by reducing its attack surface and minimizing vulnerabilities. 
+Typosquatting involves registering domain names that are typographical errors or common misspellings of popular websites.
+A virtual machine (VM) escape vulnerability in a cloud environment allows an attacker to bypass the VM‘s isolation mechanisms and gain unauthorized access to the host system or other VMs.
+A homograph attack is a variation of typosquatting where attackers use characters from different alphabets that visually resemble the intended characters.
+Suppliers are responsible for providing products or components that meet the specifications and quality standards set by the purchasing company.
+
+
+ installation of endpoint protection involves adding software to endpoints (like computers and mobile devices) to detect, prevent, and respond to malware and other malicious activities.
+Misinformation involves spreading false or inaccurate information without necessarily having a malicious intent. 
+
+Decommissioning is the process of safely removing or retiring systems, hardware, or software from active use
+Excessive resource consumption can indicate that an attacker is trying to overload a system or applicatio
+A service provider compromise occurs when a third-party service provider fails to secure their systems or services, potentially leading to vulnerabilities that affect their customers or clients.
+
+A replay attack involves capturing valid data packets and then retransmitting them.
+
+
+
+
+
 
 
 
