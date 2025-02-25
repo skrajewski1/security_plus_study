@@ -1616,5 +1616,38 @@ In a “fail-closed“ mode, if the security device encounters a failure, it wil
 
 8021X is a standard for port-based network access control It provides authentication to devices attached to a LAN port, ensuring that only authenticated devices can access the network
 The “technology“ component of capacity planning ensures that the organization has the required hardware, software, and tools to efficiently support its operations and growth
+IPSec is a suite of protocols that secures IP communications by authenticating and encrypting each IP packet, ensuring data integrity and confidentiality
+A jump server, also known as a bastion host, acts as a bridge between two networks, providing a controlled and monitored means of access, especially in secure network architectures
+The inability to patch refers to situations where a system cannot be updated or patched, often due to legacy constraints or compatibility issues
+ Web Application Firewall (WAF) is specifically designed to protect web applications by filtering and monitoring HTTP traffic, thereby safeguarding the applications from various web-based attacks
+Tokenization involves replacing sensitive data with a non-sensitive token The original data is stored securely, and the token serves as a reference to that data without revealing the actual sensitive information
+The “infrastructure“ component of capacity planning pertains to the physical or virtual resources, like data centers, networks, and storage, necessary to support the organization‘s operations
+Tunneling involves encapsulating data packets from one network in a format that another network can understand, allowing for data to be securely transmitted over incompatible networks
+Offsite backups involve storing backup data in a different physical location from the primary data center This strategy provides protection against localized disasters that might affect the primary location
+Regulated data refers to information that is subject to specific regulations imposed by governmental bodies or industry standards, ensuring its protection and confidentiality
+
+Unified Threat Management (UTM) devices offer a comprehensive security solution by integrating multiple functionalities, such as firewall, VPN, antivirus, and more, into a single device
+A warm site has the necessary infrastructure and equipment in place but might not have the most up-to-date data It requires some time to become operational after a disaster, but not as much as a cold site
+Unified Threat Management (UTM) devices combine multiple security features and functions into a single appliance, offering a comprehensive security solution
+IoT devices, often having weaker security measures, can be vulnerable to cyberattacks and can serve as entry points into larger networks
+Placing an IDS/IPS at the edge of the network, especially where it interfaces with the internet, provides optimal monitoring and protection against external threats
+Masking involves hiding specific portions of data, such as displaying only the last four digits of a credit card number while masking the rest
+
+Next-Generation Firewalls (NGFWs) offer features beyond traditional firewalls, such as application awareness, deep packet inspection, and identity-based controls
+
+While IaC provides many advantages such as consistent setups, reduced manual errors, and version control, it does not inherently enhance the physical security of the infrastructure Physical security measures must be implemented separately
+Sensors are devices or modules in a network environment that monitor specific types of data or activities, often sending this data to a centralized system for analysis or action
+An Intrusion Detection System (IDS) monitors network traffic for suspicious activities and raises alerts Unlike an IPS, it does not actively block the suspicious traffic
+The attack surface refers to all the points where an unauthorized user could potentially access and compromise a system
+Layer 4 firewalls, also known as transport layer firewalls, primarily focus on filtering traffic based on attributes like IP address, protocol, and port number
+Firewalls are typically placed at the edge of the network to act as a barrier between the internal network and external threats, such as the internet
+
+Centralized systems have a single point of control and authority, while decentralized systems distribute control across multiple points or nodes
+An inline security device is placed directly in the traffic flow and can actively intervene, while a device in tap/monitor mode observes a copy of the traffic without being directly in its path
+Virtualization enables the creation of virtual instances (or virtual machines) of physical hardware, allowing multiple OS to run on a single physical machine
+
+When dealing with third-party cloud vendors, organizations must be cautious about where their data is stored (data sovereignty) and 
+who has access to it Ensuring proper access controls and understanding data residency regulations are crucial for maintaining data security and compliance
+
 
 
