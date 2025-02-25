@@ -1542,7 +1542,15 @@ Excessive resource consumption can indicate that an attacker is trying to overlo
 A service provider compromise occurs when a third-party service provider fails to secure their systems or services, potentially leading to vulnerabilities that affect their customers or clients.
 
 A replay attack involves capturing valid data packets and then retransmitting them.
+A Host-based Intrusion Prevention System (HIPS) is designed to detect and prevent malicious activities at the host level.
 
+Suppliers, by providing components or products, have the ability to introduce compromised hardware or software into an organization‘s environment.
+Client-based software requires installation on the client‘s system to function. 
+Malicious code refers to software or scripts that are introduced into a system with the intent to cause harm, steal data, or perform other malicious actions. 
+Phishing is a form of social engineering where attackers send deceptive emails to individuals, attempting to trick them into revealing sensitive information, downloading malware, or clicking on malicious links.
+Data exfiltration refers to the unauthorized transfer of data from within an organization to an external destination. 
+ amplified DDoS attack, the attacker exploits third-party servers to amplify the amount of traffic sent to the victim
+A virus is a type of malware that attaches itself to a host file. When the host file is executed, the virus can spread to other files and systems. Viruses rely on user action, such as opening an infected file, to propagate.
 
 
 
