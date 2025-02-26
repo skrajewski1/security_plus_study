@@ -1789,3 +1789,20 @@ LDAPS (LDAP over SSL/TLS) is the secure version of the LDAP protocol, and it typ
 TCP port 3389 – This is used for Remote Desktop Protocol (RDP), not for LDAP.
 TCP port 389 – This is the standard port for LDAP (without encryption), which transmits data in plaintext.
 
+SYN flooding (a form of Distributed Denial of Service (DDoS) attack) 
+Behavioral Network Intrusion Detection System (NIDS) monitors network traffic to detect patterns or anomalies that deviate from normal behavior.
+
+
+he Rules of Engagement (RoE) document is used to clearly outline the parameters of a penetration test, specifying what is allowed and what is off-limits during the engagement. 
+
+Greg can use Host-based DLP (Data Loss Prevention) to block USB device use. 
+
+ASLR (Address Space Layout Randomization) = MOST effective in combatting buffer overflow attacks
+ASLR works by randomizing the memory addresses used by system and application processes, making it more difficult for an attacker to predict the location of specific functions or buffers they are trying to exploit. 
+
+The best approach for maximizing read performance in a situation where data is infrequently written but frequently read would be RAID 5.
+
+The technology in WPA3 that replaces the use of pre-shared keys (PSK) in earlier versions of the WPA standard is SAE (Simultaneous Authentication of Equals).
+
+
+
