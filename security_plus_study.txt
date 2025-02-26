@@ -1669,10 +1669,22 @@ An Intrusion Prevention System (IPS) is a security control designed to detect an
 
 
 
+An IPS can detect, alert, and log an intrusion attempt. The IPS could also
+be categorized as a preventive control, since it has the ability to actively
+block known attacks.
+
+
+The incident response process is preparation, detection, analysis,
+containment, eradication, recovery, and lessons learned. Once a system has
+been contained, any malware or breached user accounts should be removed
+from the system.
 
 
 
+An RTOS (Real-Time Operating System) is designed to process data and respond to inputs with minimal delay.
+for example : UAV or military grade radar tracking system
 
+ An IPS (Intrusion Prevention System) log would provide detailed information about attacks, including attempts to exploit known vulnerabilities on a web server.
 
 
 
