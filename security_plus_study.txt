@@ -1384,8 +1384,8 @@ WPS is vulnerable to brute-force attacks that attempt different PINs until succe
 
 31. Miscellanous
 
-PSK is a shared secret authentication method used in WPA (Wi-Fi Protected Access) and WPA2 for home and small business networks.
-
+PSK (Pre-Shared Key) is a shared secret authentication method used in WPA (Wi-Fi Protected Access) and WPA2 for home and small business networks.
+ IKE (Internet Key Exchange) is a protocol used in IPsec VPNs to establish secure connections and exchange cryptographic keys.
 
 EAP-TLS requires certificates on both the 802.1X server and the client devices
 Cloud Access Security Broker (CASB) is the ideal solution for improving security across different cloud services.
@@ -1737,14 +1737,15 @@ An internal self-assessment with audit can verify users have the correct
 permissions and all users meet the practice of least privilege.
 
 
+MIME specification extends the email message format beyond plain text, enabling the transfer of graphics, audio, and video files over the Internet mail system.
+S/MIME is an enhanced version of the MIME protocol that enables email security features by providing encryption, authentication, message integrity, and other related services.
 
 
-
-
-
-
-
-
+IPsec =  a suite of protocols and technologies providing encryption, authentication, and data integrity for network traffic
+ESP (Encapsulating Security Payload) in IPsec provides authentication, integrity, and confidentiality by encrypting and optionally authenticating IP packets.
+TLS = cryptographic protocol designed to provide secure communications over a computer network and is the successor to SSL
+Symmetric encryption is also called secret-key encryption
+Asymmetric encryption is also called public-key encryption
 
 
 
