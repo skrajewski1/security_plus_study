@@ -1800,9 +1800,13 @@ Greg can use Host-based DLP (Data Loss Prevention) to block USB device use.
 ASLR (Address Space Layout Randomization) = MOST effective in combatting buffer overflow attacks
 ASLR works by randomizing the memory addresses used by system and application processes, making it more difficult for an attacker to predict the location of specific functions or buffers they are trying to exploit. 
 
+salting is counter to rainbow table attacks
+
 The best approach for maximizing read performance in a situation where data is infrequently written but frequently read would be RAID 5.
 
 The technology in WPA3 that replaces the use of pre-shared keys (PSK) in earlier versions of the WPA standard is SAE (Simultaneous Authentication of Equals).
 
+NULL: Dereferencing a NULL pointer typically causes a segmentation fault or a crash in the program, leading to a denial of service. This is because a NULL pointer does not point to a valid memory location.
 
+Service account: This type of account is designed for automated tasks or services, such as retrieving data from a database. It is typically non-interactive and has the appropriate permissions to access the necessary resources without needing a human user to log in.
 
