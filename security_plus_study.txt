@@ -610,6 +610,9 @@ spyware gathers info about activity like keystrokes, browsing habits, personal d
 Rootkit type of malware that embeds itself deeply into a computer‘s operating system, providing unauthorized root or administrative access to attackers
 
 
+WORM (Write Once, Read Many).
+WORM storage ensures that once data (such as log records) is written, it cannot be modified or deleted, preserving the integrity of the logs. 
+
 
 13. Network Attacks
 
@@ -619,6 +622,8 @@ Amplified DDoS attack - it just sends a test (small) request to vulnerable serve
 reflected DDoS attack just uses third party servers to with the targets ip spoofed as the source.
 
 DNS amplication attack is like amplifed/reflected DDoS attacks execpt it just exploits open/misconfigured DNS resolvers to generate large traffic directed at a victim
+COUNTER BY: disabling open resolution, the DNS servers only respond to queries from authorized users rather than being exploited in an attack.
+
 DNS spoofing - also called DNS cache poisoning. provide false DNS info to a DNS resolvers
 
 DNS cache poisioning Remapping a domain name to a rogue IP address
@@ -1124,7 +1129,7 @@ Non-repudiation = ensures that an entity cannot deny the authenticity of a trans
 
 COPE (Corporate-Owned, Personally-Enabled) policy example:
 the company provides mobile devices to employees, retaining ownership and control over the devices, while allowing employees to use them for limited personal purposes.
-
+CYOD (Choose Your Own Device)  = employee chooses and employer buys it.
 Change Management Policy is crucial in ensuring that all modifications to IT systems, applications, and critical infrastructure components are made in a controlled, documented, and coordinated manner
 
 
@@ -1753,5 +1758,12 @@ A TAP allows the intrusion detection system (IDS) to see all network traffic cro
  Stored XSS attack, the attacker injects malicious script code into a website's message board, and the script is stored on the server
 
 
+
+application control = most effective againts zero-day attacks
+.CRT file (Certificate file): This file contains the public certificate associated with a digital certificate, and it is shared publicly.
+
+
+When capturing a system image for forensic purposes, what tool should the analyst use to avoid unintentionally
+altering the original evidence use a write blocker
 
 
