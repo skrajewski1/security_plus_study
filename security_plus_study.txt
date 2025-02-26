@@ -51,7 +51,7 @@ Use these notes as you please.  Hope they help and thank you for reading!
 
 https://skillcertpro.tech/  (cost $20.00 for 15 mock exams, total 900 questions, and 1 cheat sheet)
 https://www.examcompass.com/   (tests, quizes to use)
-Professer Messer      (lot of free content on YouTube)
+Professer Messer      (lot of free content on YouTube his exams are not free but are excellent!)
 (Exam details) https://www.comptia.org/certifications/security#examdetails  
 (exam objectives) https://www.examcompass.com/images/comptia-security-plus-sy0-701-exam-objectives-v5.pdf
 
@@ -205,7 +205,7 @@ Real-time transport protocol (RTP) = unsecure real-time delivery of audio/video 
 Secure real-time transport protocol (SRTP) = same as RTP only adds authentication, encryption to secure the message
 CCMP = encryption protocol used in wi-fi networks implementing WPA2 standard
 Transport Layer Security (TLS) = provides secure commications over a network and is successor to SSL
-
+S/MIME (Secure/Multipurpose Internet Mail Extensions) is a standard for encrypting and digitally signing email messages
 
 Techniques for encrpyting are Symmetric (secret/session key) and asymmetric (public key)
 Asymmetric encryption requires public key but the message can only be decrypted by a private-key
@@ -270,6 +270,8 @@ widely used in data integrity checks, signatures, password Hashing, blockchain, 
 purpose is generate a unique fixed-size output from any input data for integrity verification
 
 MD5 (Message-Digest Algorithm 5) and SHA-256 (Secure Hash Algorithm 256-bit) are both cryptographic hash functions.
+
+
 
 Message Digest Algorithm (MD5) = deprecated due to collision vulnerabilies
 Secure Hash Algorithm (SHA) = several versions like SHA-256, digital signatures, password storage, secure commnications, data integrity. SHA-3 very stronger
@@ -455,7 +457,9 @@ unsupported systems/apps that don't receive regular updates/patches are often vo
 wireless technologies considered to have potential threat vectors
 WPS (wi-fi protected setup)
 WEP (wired equivalent privacy)
-WPA2WPA2
+WPA2
+TKIP (Temporal Key Integrity Protocol) = TKIP was designed as an interim security protocol to improve WEP (Wired Equivalent Privacy) security without requiring new hardware
+TKIP was later replaced with CCMP (Counter Mode Cipher Block Chaining Message Authentication Code Protocol) 
 
 
 Example of typosquatting :  ‘onlinestorez.com‘ (attacker) instead of ‘onlinestore.com (legit)
@@ -1380,6 +1384,9 @@ WPS is vulnerable to brute-force attacks that attempt different PINs until succe
 
 31. Miscellanous
 
+PSK is a shared secret authentication method used in WPA (Wi-Fi Protected Access) and WPA2 for home and small business networks.
+
+
 EAP-TLS requires certificates on both the 802.1X server and the client devices
 Cloud Access Security Broker (CASB) is the ideal solution for improving security across different cloud services.
 
@@ -1728,5 +1735,20 @@ the hosts file would be categorized as risky behavior.
 
 An internal self-assessment with audit can verify users have the correct
 permissions and all users meet the practice of least privilege.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
