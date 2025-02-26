@@ -1767,3 +1767,25 @@ When capturing a system image for forensic purposes, what tool should the analys
 altering the original evidence use a write blocker
 
 
+Fog computing extends cloud computing by bringing processing closer to the network edge. I
+
+
+A rainbow table attack is a method of cracking hashed passwords by using a precomputed table of hash values. If passwords are stored without salt, attackers can use these tables to quickly match hash values to plaintext passwords.
+SSL (Secure Sockets Layer), such as SSL 2.0 or SSL 3.0, which are vulnerable to various attacks. TLS (Transport Layer Security) is the successor to SSL and is more secure.
+
+
+Mobile Device Management (MDM) solutions typically offer the following features:
+Application management – Helps with the installation, updating, and removal of apps on managed devices.
+Remote wiping – Allows an administrator to remotely erase all data from a device, usually in case it’s lost or stolen.
+Configuration management – Enables centralized control and configuration of device settings, such as Wi-Fi, VPN, and email profiles.
+
+ TOTP (Time-Based One-Time Password) is a type of multifactor authentication token that generates a new authentication code at fixed time intervals (e.g., every 30 seconds).
+
+
+A Type 1 hypervisor (also known as a bare-metal hypervisor) runs directly on the physical hardware of the host machine, rather than on an operating system. Since it operates independently of the guest operating systems, it is generally considered more secure because there is a smaller attack surface for potential vulnerabilities to exploit. 
+
+
+LDAPS (LDAP over SSL/TLS) is the secure version of the LDAP protocol, and it typically operates over TCP port 636. 
+TCP port 3389 – This is used for Remote Desktop Protocol (RDP), not for LDAP.
+TCP port 389 – This is the standard port for LDAP (without encryption), which transmits data in plaintext.
+
