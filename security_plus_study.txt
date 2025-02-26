@@ -555,7 +555,7 @@ VM escape is where the attacker breaks out of the VM and gains access to the hyp
 Resource reuse: resources that have been properly allocated might hide a malicious VM that uses that residual data to compromise another VM.
 
 sideloading: installing mobile apps from sources other than official app stores (installs apps from APK files)
-jailbreaking: removing software restrictions imposed by apple on it's iOS operating system
+jailbreaking: Jailbreaking refers to modifying a mobile device's operating system (typically iOS) to remove restrictions imposed by the manufacturer, allowing the installation of unauthorized software, including apps from outside the official app store.
 rooting: gaining admin(root) access to the OS and system apps on android devicies
 
 zero-day attack: type of attack aimed at exploiting vulnerability that is present in already released software
@@ -1748,7 +1748,9 @@ Symmetric encryption is also called secret-key encryption
 Asymmetric encryption is also called public-key encryption
 
 
-
+TAP (Test Access Point)
+A TAP allows the intrusion detection system (IDS) to see all network traffic crossing a link without disrupting the network if the device fails. 
+ Stored XSS attack, the attacker injects malicious script code into a website's message board, and the script is stored on the server
 
 
 
