@@ -1687,4 +1687,46 @@ for example : UAV or military grade radar tracking system
  An IPS (Intrusion Prevention System) log would provide detailed information about attacks, including attempts to exploit known vulnerabilities on a web server.
 
 
+best choice for validating login credentials for all usernames and passwords in an authentication system is C. LDAP.
+
+
+A replay attack involves an attacker capturing network traffic (such as packets from a legitimate session) and then retransmitting it to gain unauthorized access or perform malicious actions. This is a common method used by attackers after capturing packets.
+
+
+A WAF (Web Application Firewall) examines user input to a browser-based
+application and allows or denies traffic based on the expected input.
+
+
+An IPS (Intrusion Prevention System) monitors network traffic for exploit
+attempts such as buffer overflows, cross-site scripting, SQL injections, or other
+known exploits.
+
+Key stretching creates a stronger key by extending the key size using additional
+cryptographic processes or multiple hashing steps.
+
+
+Salting adds information to the hashing process to ensure that all password
+hashes are unique, even if the passwords themselves are identical.
+
+A data custodian is responsible for the accuracy, privacy, and security of
+the data. (kind of like integrity)
+
+
+data processor performs some type of action to the data, and this is
+often a different group within the organization or a third-party company.
+
+
+An SD-WAN (Software Defined Networking in a Wide Area Network)
+network allows users to efficiently communicate directly to cloud-based
+applications.
+
+
+Making a change to the hosts file can be a security concern, and many
+systems will prevent this change without elevated permissions. Modifying
+the hosts file would be categorized as risky behavior.
+
+
+An internal self-assessment with audit can verify users have the correct
+permissions and all users meet the practice of least privilege.
+
 
