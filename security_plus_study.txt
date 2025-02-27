@@ -134,6 +134,8 @@ Intrusion Detection System (IDS): IDS monitors network traffic for suspicious ac
 Network Address Translation (NAT): NAT is used for IP address mapping 
 Network Access Control (NAC): NAC manages network access based on compliance policies
 
+De-provisioning is the technical process of revoking a user’s access to an organization's systems and resources when they leave the company, change roles, or no longer require certain privileges.
+
 
 Defense-in-Depth is a layered security approach that uses multiple security measures across various areas, providing redundancy in the event one measure fails.
 
@@ -179,7 +181,7 @@ Gramm-Leach-Bliley Act (GLBA), also known as the Financial Services Modernizatio
 GLBA requires these institutions to provide clear explanations to their customers about their information-sharing practices.
 
  Trusted Platform Module (TPM) is a hardware-based security device that provides a secure environment for cryptographic operations
-
+an embedded microcontroller used for secure boot, disk encryption, and system integrity verification
 
 
 
@@ -239,6 +241,10 @@ Initialization Vector (IV) = is introduced in cryptography to introduce randomne
 Exclusive OR (XOR) = logical operation used in many cyptographic algorithms e.g. stream ciphers and encryption schemes b/c it's reversible
 PBKDF2 (Password-Based Key Derivation Function 2) is a widely recognized key stretching algorithm.
 
+KDC (Key Distribution Center).
+
+A KDC is a centralized server used to distribute cryptographic keys and authenticate users and services within a computer network. 
+It is a core component of Kerberos, which is a network authentication protocol used to secure communications over an insecure network.
 
 
 Cipher block chaining (CBC) = chains the ciphertext blocks together such that each one depends on the previous block.
@@ -256,9 +262,15 @@ SHTTP = secure hypertext transfer protocol, it's obsolete for data transfer over
 For email security:
 DMARC (Domain-based Message Authentication, Reporting, and Conformance) = defines how emails should be handled if they fail DKIM or SPF checks
 DKIM (DomainKeys Identified Mail) = Provides a method for the recipient to verify that the email content hasn‘t been altered during transmission  (adds digital cert to email)
+DKIM is an authentication method that allows an email sender to digitally sign an outbound message, ensuring the integrity of the message
 SPF (Sender Policy Framework) = Allows the domain owner to specify authorized mail servers permitted to send emails on their behalf  (no email spoofing)
 
 for IAM the term federation is the establishment of trust relationships between different organizations to share identity information
+
+FIM (File Integrity Monitoring) refers to the process of ensuring the integrity of files and data by monitoring for any unauthorized changes.
+It involves checking the contents of files to detect alterations, deletions, or additions that could indicate malicious activity or corruption.
+
+
 
 
 5. Hashing
@@ -907,6 +919,10 @@ WPA3-SAE (Simultaneous Authentication of Equals) offers the strongest security f
 IEEE 802.1X is a network security protocol that offers a method for authenticating and controlling user access to networked systems, particularly in Ethernet networks
 
 
+TGT (Ticket-Granting Ticket).
+In a Kerberos-protected network, the TGT is the secure token granted to users during their initial login.
+
+
 host-based firewall allows for the regulation of incoming and outgoing network traffic on individual computers with specific configuration for each
 Network-based firewall: Controls traffic at the network perimeter, not on individual systems.
 
@@ -1133,7 +1149,7 @@ CYOD (Choose Your Own Device)  = employee chooses and employer buys it.
 Change Management Policy is crucial in ensuring that all modifications to IT systems, applications, and critical infrastructure components are made in a controlled, documented, and coordinated manner
 
 
-
+Fuzz testing involves providing random, unexpected, or invalid data as input to a program to identify vulnerabilities or flaws in its behavior. 
 
 
 23. Password Concepts
@@ -1810,3 +1826,10 @@ NULL: Dereferencing a NULL pointer typically causes a segmentation fault or a cr
 
 Service account: This type of account is designed for automated tasks or services, such as retrieving data from a database. It is typically non-interactive and has the appropriate permissions to access the necessary resources without needing a human user to log in.
 
+Port scanning is a technique used by attackers to detect open or vulnerable ports on a target system. 
+The behavior described in the scenario, where a system sends streams of TCP SYN packets (part of the TCP handshake) to port 80 (a common web port) for several hours, 
+followed by a pause and then a shift to another IP address, suggests a scanning attempt to probe for open ports on various systems.
+
+
+
+Accountability refers to the ability to track and trace actions back to a specific individual or entity. Using a shared account sacrifices accountability
