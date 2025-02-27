@@ -1833,3 +1833,7 @@ followed by a pause and then a shift to another IP address, suggests a scanning 
 
 
 Accountability refers to the ability to track and trace actions back to a specific individual or entity. Using a shared account sacrifices accountability
+
+
+
+Taint analysis tracks the flow of data through a program, marking variables that contain untrusted or user-provided data. This helps in identifying potential security vulnerabilities, such as SQL injection or cross-site scripting (XSS), where user input could affect the program's behavior.
