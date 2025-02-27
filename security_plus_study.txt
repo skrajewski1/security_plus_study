@@ -1837,3 +1837,7 @@ Accountability refers to the ability to track and trace actions back to a specif
 
 
 Taint analysis tracks the flow of data through a program, marking variables that contain untrusted or user-provided data. This helps in identifying potential security vulnerabilities, such as SQL injection or cross-site scripting (XSS), where user input could affect the program's behavior.
+
+A forensic analyst might use tcpdump to acquire network traffic.
+
+tcpdump is a network packet analyzer that allows for capturing and displaying the network packets being transmitted over a network interface. It's a common tool for investigating network traffic
