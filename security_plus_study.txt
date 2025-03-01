@@ -34,6 +34,7 @@ Author: Sean Krajewski
 28. Blockchain 
 29. Linux
 30. Tools
+31. Miscellanous
 
 
 1. Note to Reader 
