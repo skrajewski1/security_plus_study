@@ -56,9 +56,6 @@ Professer Messer      (lot of free content on YouTube his exams are not free but
 (Exam details) https://www.comptia.org/certifications/security#examdetails  
 (exam objectives) https://www.examcompass.com/images/comptia-security-plus-sy0-701-exam-objectives-v5.pdf
 
-For PBQs
-Practice with labs (e.g., TryHackMe, CyberSecLabs, or CompTIA Labs) to build hands-on skills
-
 
 
 3. Security Controls
